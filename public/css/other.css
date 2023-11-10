@@ -1,0 +1,39 @@
+.card__info_mobile{
+    display: none;
+}
+.card__info_mobile_team{
+    display: none;
+}
+.card__image_team img{
+    width: 113%;
+}
+
+.no-active{
+    background-color: darkgray !important;
+}
+
+.spinner{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 739px) {
+    .card__info_mobile{
+        display: block;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+    .card__info_full{
+        display: none
+    }
+}
+@media (max-width: 473px) {
+    .card__info_mobile_team{
+        display: block;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+    .card__info_full_team{
+        display: none
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "canvas-radio-365806",
+  "private_key_id": "ae9bb0150785ab2d689fc58eb05f462c2d3db2bc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC92WwnS+SkYoBs\nitm78NK3e3dWmQN4odiIUIxUxwumupAZjSErhnYY7d/YQQcsCadxXMrnBCeap0sQ\nyC6cfHr3i9AVvmU2fdJR/N7mbpCoba4ARZ3iiloShgRJMrGJvIAbHJegQwK1+LYH\n9605/6geiEtqOCpjx2sXpXlbDC6+EZzlBwXQBbVB+MPUgCyTG9LNg470ZxUxAcTw\nk+JtgzaAvccl+mPnEAe+5+xli238IAJ2SpFyYq9IMP97X/gIKBIYk7DVqgozyJup\nnkNgPkpUfYvexdSpTBm4Zwaa3Pit6vKl9fqjc31KCVQ/igDWNfBbFdklden58mBM\nqnIOIzLbAgMBAAECggEAHrKaZ1xBM0duJp7pCBevqtV+/XSueAILhjcoCclJnAMM\nq+UDGQub6voDuO8C3t8MwSrU8Dfew4YLgEIuL0V9iKuF0Q5BRWdg67rsu+vi3ikl\n+otHNUtTty0OYludE310ZW3hIpvTQ2Nc47rrurYZFB7Luvgr+ohTS7aJAezdXgQp\nr14GqfHhF+2z9YVv8UMPZpMK7bP1KCb4AEjeY+Fbkse1x9qSewbnoA9LTcog4AhZ\nhN4amdKbqprKXQmUFhS3kvJNosQVJgFQcvFZHCQ2dXIxrpu5sMFRPCPlQAZt1Mny\n3i7r951QZf6vBF7LG02qajjkkqt51LQQDb7oH3TRKQKBgQDnLrMtG4QAF7MZDrL3\n1YwgiK4fAo9ba7tPY1CG3awr+q/B401nsZdhSHiPy58SPMsX6iF0cOG9K8kazxuS\n24NSNK1uJ8gbhGCA+NDOjzz7KW0nWr33YbuLhKvRqIGsDQtKsVPRVcw35oquKHDT\nXrJeIE4JaGNIHRjKXDvZzclX7QKBgQDSOtDWjkakFxiE1ut9GazELbpqrzfghFw4\nvZTyQ6DYII+jPRxkjlak/WgOqo67HlCN8gsGinkntkF1gMKqOb3n+eLQ5PgWTUQ+\nPqNGit4GPn7KZNVLf/kP8UUjaPqlw+6R2RlBbIteVg+ejTwGmDqlSvVzUktRiKN0\nODSq5HTM5wKBgGGlHvcBdTqYyAPgaoU1hG9Fa84bRbPGiCIa/6tHO+6DfvL07//J\nSfhEJPAPgEuys9GRCbpl52MAeHvDWJEp+IijSVGKqgG9Ywl2jrOAWrB3KeyCblRr\nykw+qFfwxXyHMerFhXKYu54s2QyAdk9A4zPQj0V3+t89svfeB0WSnuVtAoGAbUOg\nc0MzN+nBFpnVfwmvH69cqkIzWn+wptTx6xB3Mp2Jyh/i9+h64/nI8YZ39I0G9R+N\n13J1EczKLNYlVu/34e+gkU3QG1dBVtCbb/iQ+NHWeD78FOeIfV66vnK7gxhYkHkz\nhStzLC6yo4doYU0RfgN9mth0yQWpXqgvx3pBspUCgYEAxf0vkqVi/T7IlHY131Jy\npiwBf+TN4pYGWygbjdEGtOWbgNKqCECAnYfHh/4hstO5N4GXH5Twn/OGBbW6jrd/\n9PQkifC7xA0+ykzOqPGRC+bzDmcLMtMGz6Xoh3JM4SWDEY8zFSm/mJ+G3H8R4TpV\nYe5gK2Slz0fpZGRC8bmop0M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "eightex@canvas-radio-365806.iam.gserviceaccount.com",
+  "client_id": "117540929383247532760",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eightex%40canvas-radio-365806.iam.gserviceaccount.com"
+}
