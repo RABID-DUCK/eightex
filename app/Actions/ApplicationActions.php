@@ -163,7 +163,7 @@ class ApplicationActions
         $spreadsheetId = '1iqsS-HnVqF_K1Ca3KsnuJkhY4VXhyr6Mkyi7IDvk29I';
         $sheetName = 'amoCRM';
 
-        $range = $sheetName . '!A'.$range.':AF';
+        $range = $sheetName . '!A'.$range.':AN';
         $valueRange = new Google_Service_Sheets_ValueRange();
         $data = [];
         foreach ($dealsData as $deal){
@@ -171,6 +171,7 @@ class ApplicationActions
                 $deal['id'] ?? '',
                 $deal['name'] ?? '',
                 $deal['pipeline'] ?? '',
+                $deal['responsible'] ?? '',
                 $deal['price'] ?? '',
                 $deal['product'] ?? '',
                 isset($deal['weight']) ? $deal['weight'] . ".кг" : '',
@@ -198,6 +199,13 @@ class ApplicationActions
                 $deal['email_company'] ?? '',
                 $deal['web'] ?? '',
                 $deal['address_company'] ?? '',
+                $deal['is_deleted'] ?? '',
+                $deal['closed_at'] ?? '',
+                $deal['a5_type_source'] ?? '',
+                $deal['a5_account'] ?? '',
+                $deal['a5_link'] ?? '',
+                $deal['a5_messenger_avito'] ?? '',
+                $deal['a5_profile_avito'] ?? '',
                 $deal['created_at'] ?? '',
                 $deal['updated_at'] ?? '',
             ];

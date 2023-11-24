@@ -91,8 +91,8 @@
 
     });
 
-    let page = 11;
-    let range = 2;
+    let page = 9;
+    let range = 2002;
     let isFetching = false;
 
     setInterval(() => {
@@ -111,8 +111,8 @@
                     range += 250;
                     return response.json();
                 }else{
-                    page = 1;
-                    range = 2;
+                    page = 10;
+                    range = 2252;
                 }
                 throw new Error('Network response was not ok.');
             })

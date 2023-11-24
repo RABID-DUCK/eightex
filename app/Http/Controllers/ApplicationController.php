@@ -129,7 +129,7 @@ class ApplicationController extends Controller
                     );
                 });
 
-        set_time_limit(600);
+        set_time_limit(2000);
         $data = [];
         $page = $request->page;
         $range = $request->range;
@@ -241,15 +241,15 @@ class ApplicationController extends Controller
 
     function getLeadsArray($access_token, $deals){
         $data = [];
-        set_time_limit(600);
+        set_time_limit(7200);
 //        $url = "https://eightex.amocrm.ru/api/v4/leads/custom_fields";
-
         foreach ($deals as $deal) {
             if(isset($deal)){
                 $item = [
                     'id' => $deal['id'] ?? '',
                     'name' => $deal['name'] ?? '',
                     'status_id' => $deal['status_id'] ?? '',
+                    'responsible' => $this->getFields('/api/v4/users/'.$deal['responsible_user_id'], $access_token)['name'],
                     'price' => isset($deal['price']) ? $deal['price'] . ".руб" : '',
                     'account_id' => '',
                     'city_contact' => '',
@@ -262,6 +262,8 @@ class ApplicationController extends Controller
                     'partner' => '',
                     'note' => '',
                     'pipeline' => $this->getFields('/api/v4/leads/pipelines/'.$deal['pipeline_id'], $access_token)['name'],
+                    'is_deleted' => $deal['is_deleted'] === false ? "нет" : "да",
+                    'closed_at' => $deal['closed_at'] != null ? Carbon::createFromTimestampUTC($deal['closed_at'])->toDateTimeString() : '',
                     'created_at' => Carbon::createFromTimestampUTC($deal['created_at'])->toDateTimeString(),
                     'updated_at' => Carbon::createFromTimestampUTC($deal['updated_at'])->toDateTimeString(),
                 ];
@@ -286,6 +288,7 @@ class ApplicationController extends Controller
                             foreach ($contacts['custom_fields_values'] as $custom_fields_value) {
                                 switch ($custom_fields_value['field_id']){
                                     case 557765:
+                                    case 39444979:
                                         $item['account_id'] = $custom_fields_value['values'][0]['value'];
                                         break;
                                     case 557793:
@@ -329,13 +332,17 @@ class ApplicationController extends Controller
                         foreach ($deal['custom_fields_values'] as $tag){
                             if($tag['field_id'] == 567705 || $tag['field_id'] == 567701 || $tag['field_id'] == 559937 || $tag['field_id'] == 363163
                                 || $tag['field_id'] == 558497 || $tag['field_id'] == 559355 || $tag['field_id'] == 557831 || $tag['field_id'] == 562043
-                                || $tag['field_id'] == 562045 || $tag['field_id'] == 557699 || $tag['field_id'] == 519667){
+                                || $tag['field_id'] == 562045 || $tag['field_id'] == 557699 || $tag['field_id'] == 519667 || $tag['field_id'] == 561967
+                                || $tag['field_id'] == 561969 || $tag['field_id'] == 567695 || $tag['field_id'] == 567697 || $tag['field_id'] == 567703
+                                || $tag['field_id'] == 567709 || $tag['field_id'] == 567707  || $tag['field_id'] == 557705 || $tag['field_id'] == 559249
+                                || $tag['field_id'] == 559477 || $tag['field_id'] == 559479 || $tag['field_id'] == 559481 || $tag['field_id'] == 561957
+                                || $tag['field_id'] == 561959 || $tag['field_id'] == 561961 || $tag['field_id'] == 561963 || $tag['field_id'] == 559239
+                                || $tag['field_id'] == 559237 || $tag['field_id'] == 557707){
                                 $item = array_merge($item, $this->getFieldsCustom($deal['custom_fields_values']));
                             }
                         }
                     }
                 }
-
                 $data[] = $item;
             }
         }
@@ -371,13 +378,21 @@ class ApplicationController extends Controller
                 'weight' => '',
                 'product' => '',
                 'advertisement' => '',
+                'city_contact' => '',
                 'url_advertisement' => '',
                 'price' => '',
+                'a5_type_source' => '',
+                'a5_account' => '',
+                'a5_link' => '',
+                'a5_messenger_avito' => '',
+                'a5_profile_avito' => '',
+                'web' => ''
             ];
             foreach($data as $custom){
                 if (isset($custom['field_id'])){
                     switch ($custom['field_id']){
                         case 559937:
+                        case 559237:
                             $items['source'] = $custom['values'][0]['value'];
                             break;
                         case 558497:
@@ -385,6 +400,9 @@ class ApplicationController extends Controller
                             break;
                         case 559355:
                             $items['phone'] = $custom['values'][0]['value'];
+                            break;
+                        case 559247:
+                            $items['city_contact'] = $custom['values'][0]['value'];
                             break;
                         case 557831:
                             $items['comment'] = $custom['values'][0]['value'];
@@ -408,14 +426,39 @@ class ApplicationController extends Controller
                         case 559481:
                             $items['volume'] = $custom['values'][0]['value'];
                             break;
+                        case 561957:
                         case 557705:
+                        case 561961:
+                        case 561967:
                             $items['advertisement'] = $custom['values'][0]['value'];
                             break;
                         case 557707:
+                        case 561959:
+                        case 561963:
+                        case 561969:
                             $items['url_advertisement'] = $custom['values'][0]['value'];
                             break;
                         case 567701:
                             $items['price'] = $custom['values'][0]['value'];
+                            break;
+                        case 567695:
+                            $items['a5_type_source'] = $custom['values'][0]['value'];
+                            break;
+                        case 567697:
+                            $items['a5_account'] = $custom['values'][0]['value'];
+                            break;
+                        case 567703:
+                            $items['a5_link'] = $custom['values'][0]['value'];
+                            break;
+                        case 567709:
+                            $items['a5_messenger_avito'] = $custom['values'][0]['value'];
+                            break;
+                        case 567707:
+                            $items['a5_profile_avito'] = $custom['values'][0]['value'];
+                            break;
+                        case 559249:
+                        case 559239:
+                            $items['web'] = $custom['values'][0]['value'];
                             break;
                         default:
                             break;
@@ -537,7 +580,8 @@ class ApplicationController extends Controller
 //                $data = array_merge($data, $item);
 //            }
 //        }
-        $page = 1;
+        $page = 10;
+        $range = 2252;
 
         do{
             $url = "https://eightex.amocrm.ru/api/v4/leads?with=contacts,companies,catalog_elements&page=$page";
@@ -552,7 +596,7 @@ class ApplicationController extends Controller
             $deals = json_decode($response, true);
             if(isset($deals['status']) && $deals['status'] === 401){
                 $this->saveToken();
-                $url = "https://eightex.amocrm.ru/api/v4/leads?with=contacts,companies,catalog_elements&page=$i";
+                $url = "https://eightex.amocrm.ru/api/v4/leads?with=contacts,companies,catalog_elements&page=$page";
 
                 $curl = curl_init($url);
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -568,18 +612,21 @@ class ApplicationController extends Controller
                     $data[] = $lead;
                 }
             }
-            if(!isset($deals) && $deals === null) continue; // Пропускаем итерацию, если массив равен null
+            if(!isset($deals) && $deals === null) {
+                continue;
+            } // Пропускаем итерацию, если массив равен null
 
             foreach ($deals['_embedded']['leads'] as $lead){
                 $data[] = $lead;
             }
 
             $page++;
+            $range += 249;
         }while(isset($deals) && $deals !== null);
 
         $dealsData = $this->getLeadsArray($accessToken, $data);
 
-        $actions->saveModelsAndSheet2($dealsData, 2);
+        $actions->saveModelsAndSheet2($dealsData, $range);
         echo "<h1>Данные выгружены</h1>";
         echo "<a style='background-color: black; color: white; text-decoration: none; padding: 10px 20px; font-size: 20px;' href='/admin'>Вернуться</a>";
     }
