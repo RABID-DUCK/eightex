@@ -239,6 +239,15 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   margin: 70px auto;
 }
 
+.siema {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.siema-item {
+  position: relative;
+}
+
 @media (max-width: 739px) {
   .card__info_mobile {
     display: block;

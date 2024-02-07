@@ -244,6 +244,10 @@
                 <img src="{{asset('/img/about/team.jpg')}}" alt="{{__('site.team_title')}}">
         </section>
 
+        <div class="siema-wrapper">
+            @include('components.reels')
+        </div>
+
         <section class="reviews">
             <div class="reviews__container container">
                 <div class="reviews__label label">
