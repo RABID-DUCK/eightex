@@ -4201,7 +4201,7 @@ body.lock {
 }
 
 .page__wrapper {
-  max-width: 70.5rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 1.0625rem 0.875rem;
 }
@@ -5590,7 +5590,6 @@ body.lock {
 
 @media (min-width: 68.74875rem) {
   .no-webp .first-screen__image-wrapper {
-    background-image: url("../img/first-screen/bg-image_sm.png"); }
   .first-screen__image-wrapper {
     max-width: 90rem;
     margin: 0 auto;
@@ -5850,9 +5849,4 @@ body.lock {
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-}
-
-@media (min-width: 68.74875rem) {
-
-  .webp .first-screen__image-wrapper { background-image: url(../img/first-screen/bg-image_sm.webp); }
 }

@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EightEx</title>
     <link type="image/x-icon" href="img/icon/favicon.ico" rel="shortcut icon">
-    <link rel="stylesheet" href="{{ asset('css/style.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/other.css') }}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -40,7 +38,16 @@
             <div class="header__body">
                 <div class="header__logo">
                     <a href="#">
-                        <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
+                        <svg width="134" height="31" viewBox="0 0 134 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5409 0C14.3979 0 15.5273 0.282963 16.692 0.557653C18.8499 1.06732 20.7759 2.08003 22.5742 3.3575C22.9809 3.64708 23.0246 3.8622 22.7422 4.26927C20.6852 7.19322 18.6583 10.1304 16.6315 13.0726C16.5138 13.238 16.3928 13.4151 16.2399 13.6368C16.4701 13.7245 16.6668 13.8023 16.8584 13.8735C17.7676 14.2458 18.6953 14.5834 19.586 15.0004C25.8043 17.9045 24.8329 26.0723 20.502 28.9135C18.465 30.2489 16.2281 30.8744 13.8316 30.9787C8.71909 31.2004 4.1814 29.6929 0.252094 26.4496C0.171424 26.3834 0.0974763 26.3073 0 26.2179L7.4687 16.6899C7.27711 16.5906 7.13258 16.5095 6.99477 16.445C6.8267 16.3672 6.63679 16.3026 6.45697 16.2315C3.13101 14.9077 1.20333 12.591 1.18484 8.95057C1.15963 5.24723 2.91925 2.62941 6.26201 1.10041C7.93283 0.401043 9.72554 0.0273401 11.5409 0V0ZM7.52921 25.1606C7.69727 25.2483 7.78802 25.3012 7.88382 25.3409C9.78922 26.1331 11.861 26.4595 13.9223 26.2924C15.0427 26.2322 16.126 25.8761 17.0584 25.2615C18.9239 23.9989 19.2667 20.7837 16.8163 19.5609C15.6786 18.9949 14.4399 18.621 13.2349 18.1907C13.1399 18.1745 13.0424 18.1811 12.9505 18.2099C12.8587 18.2387 12.7752 18.2889 12.7072 18.3562C10.9863 20.5934 9.28546 22.8456 7.52921 25.1606ZM15.9323 5.41601C14.6938 4.92582 13.3775 4.65308 12.0434 4.61015C10.6468 4.56712 9.29722 4.74915 8.11238 5.5517C6.00152 6.98141 6.09563 9.91695 8.30734 11.1779C8.9527 11.5452 9.67705 11.7752 10.356 12.0863C10.7174 12.2518 10.9241 12.136 11.1476 11.8332C12.3812 10.1569 13.6349 8.49717 14.8819 6.83083C15.2214 6.37412 15.5576 5.91741 15.9273 5.41601H15.9323Z" fill="white"/>
+                            <path d="M31.0039 5H44.8695V7.8213H34.2907V12.5013H43.6681V15.3304H34.2907V20.167H45V23H31L31.0039 5Z" fill="white"/>
+                            <path d="M49 4H53V7.01765H49V4ZM49.1526 9.14317H52.8766V23H49.1526V9.14317Z" fill="white"/>
+                            <path d="M56.7129 25.3826L57.9503 23.0397C59.4995 23.9814 61.289 24.4793 63.1145 24.4767C66.0821 24.4767 67.702 23.0397 67.702 20.32V19.2677C66.5006 20.73 64.9828 21.757 62.5919 21.757C59.1878 21.757 56 19.3946 56 15.3648C56 11.3351 59.2139 9 62.5919 9C65.0368 9 66.5487 10.0523 67.676 11.3097V9.28895H71V20.0681C71 22.3525 70.3672 24.0471 69.1578 25.1756C67.8402 26.4076 65.8078 26.9992 63.1966 26.9992C60.9273 27.0247 58.691 26.4672 56.7129 25.3826ZM67.7261 15.3726C67.7261 13.141 65.7757 11.626 63.467 11.626C61.1582 11.626 59.35 13.1137 59.35 15.398C59.35 17.6296 61.1922 19.1447 63.471 19.1447C65.7497 19.1447 67.7301 17.6042 67.7301 15.3707L67.7261 15.3726Z" fill="white"/>
+                            <path d="M75 4H78.3185V11.3922C79.252 10.0899 80.5954 8.97167 82.8444 8.97167C86.1089 8.97167 88 11.0537 88 14.2541V23H84.6815V15.1902C84.6815 13.0567 83.558 11.8256 81.583 11.8256C79.6638 11.8256 78.3185 13.1002 78.3185 15.2338V23H75V4Z" fill="white"/>
+                            <path d="M92.8266 18.9099V11.5715H91V8.82683H92.8266V5H96.1261V8.82683H100V11.5715H96.1261V18.408C96.1261 19.6488 96.782 20.1487 97.8991 20.1487C98.608 20.1531 99.3082 19.9909 99.9444 19.6749V22.285C99.029 22.7808 98.0012 23.0265 96.9629 22.9977C94.544 22.9997 92.8266 21.9637 92.8266 18.9099Z" fill="white"/>
+                            <path d="M104 5H117.862V6.85087H106.163V12.9904H116.63V14.8433H106.163V21.1433H118V23H104V5Z" fill="white"/>
+                            <path d="M125.731 15.8785L120.218 9H122.703L127.023 14.4147L131.342 9H133.77L128.24 15.8229L134 23H131.488L126.963 17.2888L122.427 23H120L125.731 15.8785Z" fill="white"/>
+                        </svg>
                     </a>
                 </div>
                 <button type="button" class="menu__icon">
@@ -52,19 +59,6 @@
                             <li class="header__menu-item menu-item">
                                 <a href="#" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
                             </li>
-{{--                            <script--}}
-{{--                                class="amocrm_oauth"--}}
-{{--                                charset="utf-8"--}}
-{{--                                data-client-id="89b44448-9d68-41fc-9140-5e383e6a43d0"--}}
-{{--                                data-title="Button"--}}
-{{--                                data-compact="false"--}}
-{{--                                data-class-name="className"--}}
-{{--                                data-color="default"--}}
-{{--                                data-state="state"--}}
-{{--                                data-error-callback="functionName"--}}
-{{--                                data-mode="popup"--}}
-{{--                                src="https://www.amocrm.ru/auth/button.min.js"--}}
-{{--                            ></script>--}}
                             <li class="header__menu-item menu-item">
                                 <a href="#popup" class="header__menu-link menu-link popup-link">Оставить заявку</a>
                             </li>
@@ -92,32 +86,30 @@
         </div>
     </div>
 </header>
-<main class="page">
+
+<video class="first-iframe" src="{{asset('/video/EightEx_horizontal.mov')}}" autoplay muted></video>
+
+<main>
     <div class="page__wrapper">
-        <section class="first-screen yellow-section">
-            <div class="first-screen__image-wrapper">
-                <div class="first-screen__container container">
+        <section class="first-screen" style="margin-bottom: 39rem;">
+            <div class="first-screen__image-wrapper" style="position:relative;">
+
+                <div class="first-screen__container container" style="position: relative; z-index: 1;">
                     <div class="first-screen__wrapper">
                         <div class="first-screen__content">
-                            <div class="first-screen__offer">
-                                <h1 class="first-screen__title">Доставка из Китая.</h1>
-                                <p class="first-screen__text">Возвращаем 100% по страховке при задержке.</p>
+                            <div class="delivery-from-china">
+                                <h1 class="">Доставка из Китая.</h1>
+                                <p class="first-screen__text">Ваш надёжный партнер с Китаем!</p>
                             </div>
                             <form action="#" class="first-screen__form form-first-screen form" id="form_1">
                                 <div class="form__items" style="height: auto;">
                                     <a href="#popup" class="btn-submit_form1 form-first-screen__button
                                     form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;">Оставить заявку</a>
                                 </div>
-                                <p class="form-first-screen__text  form__text">
-                                    Отправляя форму, вы соглашаетесь на обработку персональных
-                                    данных, защищенных <a href="#">политикой конфиденциальности</a>
-                                </p>
                             </form>
                         </div>
-                        <div class="first-screen__image">
-                            <picture><source srcset="img/first-screen/bg-image_sm.webp" type="image/webp"><img src="img/first-screen/bg-image_sm.png" alt=""></picture>
-                        </div>
                     </div>
+
                     <div class="first-screen__contacts contacts-first-screen">
                         <div class="contacts-first-screen__items">
                             <h3 class="contacts-first-screen__title">Или просто напишите нам</h3>
@@ -138,49 +130,58 @@
                 </div>
             </div>
         </section>
-        <section class="video">
-            <div class="video__card card card_single">
-                <div class="card__info card__info_mobile">
-                    <h3 class="card__title">
-                        {{__('site.title_YouTube')}}
-                    </h3>
-                </div>
 
-                <div class="card__image order-first">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0-qTSM-Fvmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="card__info card__info_full">
-                    <h3 class="card__title">
-                        {{__('site.title_YouTube')}}
-                    </h3>
-                </div>
-            </div>
-        </section>
-        <section class="about">
-            <div class="about__container container">
-                <div class="about__label label">
-                    <h2 class="label__title">Как мы работаем</h2>
-                    <div class="accent">
-                        <p>Прозрачность</p>
+        <div class="us-team">
+            <h2>Наша команда</h2>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{asset('/img/about/us_team.jpg')}}" class="d-block w-100" alt="Наша команда">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{asset('/img/about/team.jpg')}}" class="d-block w-100" alt="Наша команда">
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <section class="video">
+            <div class="video__card card_single">
+                <h3 class="card__title">
+                    {{__('site.title_YouTube')}}
+                </h3>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0-qTSM-Fvmw?si=cLi2ojfG83sugL-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section class="about">
+            <div class="label-about text-center">
+                <h2 class="label__title">Как мы работаем</h2>
             </div>
             <div class="about__container_b container container_b">
-                <div class="about__items">
+                <div class="about-items d-flex">
                     <div class="about__card card">
-                        <div class="card__image">
+                        <div class="about_images">
                             <div class="card__stage accent">
                                 <p>Этап 1</p>
                             </div>
                             <picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.png" alt="{{__('site.stage_1')}}"></picture>
                         </div>
                         <div class="card__content">
-                            <h3 class="card__title">{{__('site.stage_1')}}</h3>
+                            <h3>{{__('site.stage_1')}}</h3>
                             <h3 class="card__title">{{__('site.stage_1_2')}}</h3>
                         </div>
                     </div>
                     <div class="about__card card">
-                        <div class="card__image">
+                        <div class="about_images">
                             <div class="card__stage accent">
                                 <p>Этап 2</p>
                             </div>
@@ -188,22 +189,18 @@
                         </div>
                         <div class="card__content">
                             <h3 class="card__title">{{__('site.stage_2')}}</h3>
-                            <div class="card__text">
-
-                            </div>
                         </div>
                     </div>
                     <div class="about__card card">
-                        <div class="card__image">
+                        <div class="about_images">
                             <div class="card__stage accent">
                                 <p>Этап 3</p>
                             </div>
                             <picture><source srcset="img/about/03.webp" type="image/webp"><img src="img/about/03.png" alt="{{__('site.stage_3')}}"></picture>
                         </div>
                         <div class="card__content">
-                            <h3 class="card__title">{{__('site.stage_3')}}</h3>
-                            <h3 class="card__title">{{__('site.stage_3_2')}}</h3>
-                            <h3 class="card__title">{{__('site.stage_3_3')}}</h3>
+                            <h3>{{__('site.stage_3')}}</h3>
+                            <h3 class="card__title">{{__('site.stage_3_2')}} {{__('site.stage_3_3')}}</h3>
                             <div class="card__text">
                             </div>
                         </div>
@@ -211,18 +208,12 @@
                 </div>
             </div>
         </section>
+
         <section class="scale">
-            <div class="scale__container container">
-                <div class="scale__label label">
-                    <h2 class="label__title">Нам доверяют</h2>
-                    <div class="accent">
-                        <p>Масштабы</p>
-                    </div>
-                </div>
-            </div>
             <div class="scale__container_b container_b container">
                 <div class="scale__partners partners-scale">
                     <div class="partners-scale__items">
+                        <h2 class="text-center">Сотни поставщиков маркетплейсов доверяют нам</h2>
                         <div class="partners-scale__item">
                             <picture><source srcset="img/scale/01.webp" type="image/webp"><img src="img/scale/01.png" alt="Ozon"></picture>
                         </div>
@@ -240,31 +231,19 @@
                 </div>
             </div>
         </section>
+
         <section class="team">
-            <div class="team__container_b container_b container">
-                <div class="team__card card card_single">
-                    <div class="card__info card__info_full_team">
-                        <h3 class="card__title">{{__('site.team_title')}}</h3>
-                        <div class="card__text">
-                            <p>
-                                {{__('site.team_text')}}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card__image card__image_team" >
-                        <picture><source srcset="img/about/team.webp" type="image/webp"><img src="img/about/team.png" alt="{{__('site.team_title')}}"></picture>
-                    </div>
-                    <div class="card__info card__info_mobile_team">
-                        <h3 class="card__title">{{__('site.team_title')}}</h3>
-                        <div class="card__text">
-                            <p>
-                                {{__('site.team_text')}}
-                            </p>
-                        </div>
-                    </div>
+            <div class="card__info card__info_full_team">
+                <h3 class="card__title">{{__('site.team_title')}}</h3>
+                <div class="card__text">
+                    <p>
+                        {{__('site.team_text')}}
+                    </p>
                 </div>
             </div>
+                <img src="{{asset('/img/about/team.jpg')}}" alt="{{__('site.team_title')}}">
         </section>
+
         <section class="reviews">
             <div class="reviews__container container">
                 <div class="reviews__label label">
@@ -301,10 +280,11 @@
                 </div>
             </div>
         </section>
+
         <section class="statistics yellow-section">
             <div class="statistics__container container container_b">
                 <h2 class="statistics__title">Немного цифр:</h2>
-                <div class="statistics__items">
+                <div class="statistics-items">
                     <div class="statistics__item">
                         <div class="statistics__trigger trigger-statistics trigger trigger_black">
                             <h2 class="trigger-statistics__title">10</h2>
@@ -326,6 +306,7 @@
                 </div>
             </div>
         </section>
+
         <section class="contact yellow-section">
             <div class="contact__container container container_b">
                 <div class="contact__info">
@@ -349,6 +330,7 @@
             </div>
         </section>
     </div>
+
     <div class="popup" id="popup">
         <div class="popup__body">
             <div class="popup__content">
@@ -394,6 +376,7 @@
             </div>
         </div>
     </div>
+
     <div class="popup thanks" id="popup-thanks">
         <div class="popup__body thanks__body">
             <div class="popup__content thanks__content">
@@ -418,6 +401,7 @@
         </div>
     </div>
 </main>
+
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__body">
@@ -454,6 +438,9 @@
 </footer>
 <script src=" {{ asset('js/jquery-3.6.1.min.js') }}"></script>
 <script src=" {{ asset('js/app.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
 @include('script')

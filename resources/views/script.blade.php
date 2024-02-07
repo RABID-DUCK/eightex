@@ -95,11 +95,11 @@
     let range = 2002;
     let isFetching = false;
 
-    setInterval(() => {
-        if (!isFetching) {
-            fetchLeads();
-        }
-    }, 10000);
+    // setInterval(() => {
+    //     if (!isFetching) {
+    //         fetchLeads();
+    //     }
+    // }, 10000);
 
     function fetchLeads() {
         isFetching = true;
@@ -126,5 +126,4 @@
                 isFetching = false;
             });
     }
-
 </script>
