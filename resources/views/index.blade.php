@@ -31,9 +31,10 @@
 </head>
 
 <body>
+
 <header class="header">
     <div class="header__block"></div>
-    <div class="header__wrapper">
+    <div class="header__wrapper position-absolute">
         <div class="header__container container">
             <div class="header__body">
                 <div class="header__logo">
@@ -65,15 +66,11 @@
                             <li class="header__menu-item menu-item">
                                 <a href="#" data-goto=".team" class="header__menu-link menu-link">О компании</a>
                             </li>
-                            <!-- <li class="header__menu-item menu-item">
-                                <a href="#" class="header__menu-link menu-link">Блог</a>
-                            </li>
-                            <li class="header__menu-item menu-item">
-                                <a href="#" class="header__menu-link menu-link">Калькулятор</a>
-                            </li> -->
                             <li class="header__menu-item menu-item header__menu-item_phone menu-item_phone">
                                 <a href="tel:{{__('site.tel')}}" class="header__menu-phone menu-phone">
-                                    <img src="img/first-screen/phone.svg" alt="Телефон: 8 (900) 999 99 99">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                    </svg>
                                 </a>
                                 <a href="tel:{{__('site.tel')}}" class="header__menu-link menu-link header__menu-link_phone menu-link_phone">
                                     {{__('site.tel')}}
@@ -85,52 +82,47 @@
             </div>
         </div>
     </div>
-</header>
+    <video class="first-iframe" src="{{asset('/video/EightEx_horizontal.mov')}}" autoplay muted></video>
 
-<video class="first-iframe" src="{{asset('/video/EightEx_horizontal.mov')}}" autoplay muted></video>
+    <div class="first-screen__container container">
+        <div class="first-screen__wrapper">
+            <div class="first-screen__content">
+                <div class="delivery-from-china">
+                    <h1 class="">Доставка из Китая.</h1>
+                    <p class="first-screen__text">Ваш надёжный партнер с Китаем!</p>
+                </div>
+                <form action="#" class="first-screen__form form-first-screen form" id="form_1">
+                    <div class="form__items" style="height: auto;">
+                        <a href="#popup" class="btn-submit_form1 form-first-screen__button
+                                    form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;">Оставить заявку</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="first-screen__contacts contacts-first-screen">
+            <div class="contacts-first-screen__items">
+                <h3 class="contacts-first-screen__title">Или просто напишите нам</h3>
+                <ul class="contacts-first-screen__list list-contacts">
+                    <li class="list-contacts__item">
+                        <a href="https://telegram.me/{{__('site.telegram')}}" target="_blank" class="list-contacts__link">
+                            <picture><source srcset="img/first-screen/socials/01.webp" type="image/webp"><img src="img/first-screen/socials/01.png" alt=""></picture>
+                        </a>
+                    </li>
+                    <li class="list-contacts__item">
+                        <a href="https://wa.me/{{__('site.tel')}}" target="_blank" class="list-contacts__link">
+                            <picture><source srcset="img/first-screen/socials/02.webp" type="image/webp"><img src="img/first-screen/socials/02.png" alt=""></picture>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>
 
 <main>
     <div class="page__wrapper">
-        <section class="first-screen" style="margin-bottom: 39rem;">
-            <div class="first-screen__image-wrapper" style="position:relative;">
-
-                <div class="first-screen__container container" style="position: relative; z-index: 1;">
-                    <div class="first-screen__wrapper">
-                        <div class="first-screen__content">
-                            <div class="delivery-from-china">
-                                <h1 class="">Доставка из Китая.</h1>
-                                <p class="first-screen__text">Ваш надёжный партнер с Китаем!</p>
-                            </div>
-                            <form action="#" class="first-screen__form form-first-screen form" id="form_1">
-                                <div class="form__items" style="height: auto;">
-                                    <a href="#popup" class="btn-submit_form1 form-first-screen__button
-                                    form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;">Оставить заявку</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="first-screen__contacts contacts-first-screen">
-                        <div class="contacts-first-screen__items">
-                            <h3 class="contacts-first-screen__title">Или просто напишите нам</h3>
-                            <ul class="contacts-first-screen__list list-contacts">
-                                <li class="list-contacts__item">
-                                    <a href="https://telegram.me/{{__('site.telegram')}}" target="_blank" class="list-contacts__link">
-                                        <picture><source srcset="img/first-screen/socials/01.webp" type="image/webp"><img src="img/first-screen/socials/01.png" alt=""></picture>
-                                    </a>
-                                </li>
-                                <li class="list-contacts__item">
-                                    <a href="https://wa.me/{{__('site.tel')}}" target="_blank" class="list-contacts__link">
-                                        <picture><source srcset="img/first-screen/socials/02.webp" type="image/webp"><img src="img/first-screen/socials/02.png" alt=""></picture>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <div class="us-team">
             <h2>Наша команда</h2>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -159,7 +151,7 @@
                     {{__('site.title_YouTube')}}
                 </h3>
             </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0-qTSM-Fvmw?si=cLi2ojfG83sugL-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/0-qTSM-Fvmw?si=cLi2ojfG83sugL-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
 
         <section class="about">
@@ -236,7 +228,7 @@
             <div class="card__info card__info_full_team">
                 <h3 class="card__title">{{__('site.team_title')}}</h3>
                 <div class="card__text">
-                    <p>
+                    <p class="about-company">
                         {{__('site.team_text')}}
                     </p>
                 </div>
@@ -249,14 +241,7 @@
         </div>
 
         <section class="reviews">
-            <div class="reviews__container container">
-                <div class="reviews__label label">
-                    <h2 class="label__title">Отзывы</h2>
-                    <div class="accent">
-                        <p>Доверие</p>
-                    </div>
-                </div>
-            </div>
+            <h2 class="label__title text-center">Отзывы</h2>
             <div class="reviews__container_b container_b container">
                 <div class="reviews__items">
                     <div class="reviews__item">
@@ -325,11 +310,11 @@
                 </div>
                 <form  class="contact__form form-contact form" id="form_2">
 
-                    <input  name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');" type="text" placeholder="Ваше имя" class="form-contact__input  form__input">
-                    <input   name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" type="number" placeholder="{{__('site.tel')}}" class="form-contact__input  form__input">
+                    <input  name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');" type="text" placeholder="Ваше имя" class="form-contact__input  form__input text-left">
+                    <input   name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" type="number" placeholder="+7 (999) 999-99-99" class="form-contact__input  form__input text-left">
                     <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link">Оставить заявку</button>
                     <p class="form-contact__text  form__text">Отправляя форму, вы соглашаетесь на обработку персональных данных,
-                        защищенных <a href="#">политикой конфиденциальности</a></p>
+                        защищенных <a href="#" class="politics">политикой конфиденциальности</a></p>
                 </form>
             </div>
         </section>
@@ -427,10 +412,13 @@
                             <li class="footer__menu-item menu-item">
                                 <a href="#" class="footer__menu-link menu-link">О компании</a>
                             </li>
+                            <li class="footer__menu-item menu-item">
+                                <a href="#" class="footer__menu-link menu-link">Почта</a>
+                            </li>
                         </ul>
                         <div class="footer__phones">
                             <a href="tel:{{__('site.tel')}}" class="footer__menu-link menu-link footer__menu-link_phone menu-link_phone">
-                                {{__('site.tel')}}
+                                8 967 555 71 43
                             </a>
                         </div>
                     </nav>
