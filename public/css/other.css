@@ -239,13 +239,23 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   margin: 70px auto;
 }
 
+.siema-wrapper {
+  margin-top: 70px;
+}
+
 .siema {
   max-width: 1040px;
   margin: 0 auto;
 }
-
-.siema-item {
-  position: relative;
+.siema .item-siema {
+  margin-right: 30px;
+  padding-right: 30px;
+}
+.siema div:first-child {
+  display: flex;
+}
+.siema iframe {
+  border-radius: 12px;
 }
 
 @media (max-width: 739px) {

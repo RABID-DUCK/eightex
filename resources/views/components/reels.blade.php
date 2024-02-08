@@ -43,9 +43,16 @@
 <script src="{{ asset('js/siema.min.js') }}"></script>
 <script>
     new Siema({
-        selector: '.siema-container',
-        duration: 500,
-        perPage: { 0:3, 768:4, 1240:5 },
-        loop: true,
+        selector: '.siema',
+        perPage: 3,
+        startIndex: 0,
+        easing: 'ease-out',
+        loop: false,
+        rtl: false,
+        draggable: true,
+        multipleDrag: true,
     });
+    var items = document.getElementById('siema-container');
+    var nextItem = items.nextElementSibling;
+    nextItem.classList.add('siema-control');
 </script>

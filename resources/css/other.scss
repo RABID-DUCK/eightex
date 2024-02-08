@@ -274,14 +274,28 @@ iframe{
     margin: 70px auto;
 }
 
+.siema-wrapper{
+    margin-top: 70px;
+}
+
 .siema{
     max-width: 1040px;
     margin: 0 auto;
+
+    .item-siema{
+        margin-right: 30px;
+        padding-right: 30px;
+    }
+
+    div:first-child{
+        display: flex;
+    }
+
+    iframe{
+        border-radius: 12px;
+    }
 }
 
-.siema-item {
-    position: relative;
-}
 
 
 @media (max-width: 739px) {
