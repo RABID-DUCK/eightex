@@ -404,6 +404,10 @@
                     <a href="#">
                         <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
                     </a>
+
+                    <button type="button" class="menu__icon" id="footer-btn-menu">
+                        <span></span>
+                    </button>
                 </div>
                 <div class="footer__menu menu">
                     <nav class="footer__menu-nav">
@@ -421,9 +425,7 @@
                                 <a href="#" class="footer__menu-link menu-link">Почта</a>
                             </li>
                         </ul>
-                        <button type="button" class="menu__icon" id="btn-menu-footer">
-                            <span></span>
-                        </button>
+
                         <div class="footer__phones">
                             <a href="tel:{{__('site.tel')}}" class="footer__menu-link menu-link footer__menu-link_phone menu-link_phone">
                                 8 967 555 71 43

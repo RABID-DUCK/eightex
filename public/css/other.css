@@ -341,6 +341,9 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .header__menu._active a {
     color: black !important;
   }
+  .menu__icon {
+    position: absolute;
+  }
 }
 @media (max-width: 850px) {
   .first-screen__container {
@@ -355,6 +358,22 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 @media (max-width: 790px) {
   .first-screen__container {
     left: 130px;
+  }
+  .menu__icon:not(.menu__icon._active):before, .menu__icon:not(.menu__icon._active) span, .menu__icon:not(.menu__icon._active):after {
+    background-color: #fff;
+  }
+  .menu__icon._active {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+  }
+  footer .menu__icon:not(.menu__icon._active):before, footer .menu__icon:not(.menu__icon._active) span, footer .menu__icon:not(.menu__icon._active):after {
+    background-color: black;
+  }
+  footer .menu__icon._active {
+    position: fixed;
+    top: 50px;
+    right: 20px;
   }
 }
 @media (max-width: 739px) {
@@ -388,6 +407,9 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .statistics-items .statistics__item:not(.statistics-items .statistics__item:first-child) {
     margin-top: 9px;
+  }
+  .footer__top {
+    flex-direction: column;
   }
 }
 @media (max-width: 695px) {
@@ -543,6 +565,11 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .about-items .about__card {
     height: auto !important;
+  }
+  .menu__icon {
+    position: absolute;
+    right: 50px;
+    width: 30px;
   }
 }
 @media (max-width: 405px) {

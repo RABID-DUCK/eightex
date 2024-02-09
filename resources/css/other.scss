@@ -407,6 +407,10 @@ iframe{
             color: black !important;
         }
     }
+
+    .menu__icon{
+        position: absolute;
+    }
 }
 
 @media (max-width: 850px) {
@@ -424,6 +428,32 @@ iframe{
 @media (max-width: 790px) {
     .first-screen__container{
         left: 130px;
+    }
+
+    .menu__icon:not(.menu__icon._active){
+        &:before, span, &:after{
+            background-color: #fff;
+        }
+    }
+
+    .menu__icon._active{
+        position: fixed;
+        top: 50px;
+        right: 20px;
+    }
+
+    footer{
+        .menu__icon:not(.menu__icon._active){
+            &:before, span, &:after{
+                background-color: black;
+            }
+        }
+
+        .menu__icon._active{
+            position: fixed;
+            top: 50px;
+            right: 20px;
+        }
     }
 }
 
@@ -463,6 +493,10 @@ iframe{
                 margin-top: 9px;
             }
         }
+    }
+
+    .footer__top{
+        flex-direction: column;
     }
 }
 
@@ -670,6 +704,12 @@ iframe{
         .about__card{
             height: auto !important;
         }
+    }
+
+    .menu__icon{
+        position: absolute ;
+        right: 50px;
+        width: 30px;
     }
 }
 

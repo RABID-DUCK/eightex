@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Вероятно у вас включен блокировщик рекламы!")
     }
 
-    let footer_btn = document.getElementById('btn-menu-footer');
+    let footer_btn = document.getElementById('footer-btn-menu');
     let header_menu = document.querySelector('.header__menu');
 
     footer_btn.addEventListener('click', () => {
