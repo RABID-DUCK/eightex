@@ -11,5 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }else{
         console.log("Вероятно у вас включен блокировщик рекламы!")
     }
-})
 
+    let footer_btn = document.getElementById('btn-menu-footer');
+    let header_menu = document.querySelector('.header__menu');
+
+    footer_btn.addEventListener('click', () => {
+        if(!document.getElementById('header-btn-menu').classList.contains('_active')) {
+            document.getElementById('header-btn-menu').classList.add('_active')
+            header_menu.classList.add('_active')
+            document.querySelector('body').classList.add('lock')
+        }
+    })
+})

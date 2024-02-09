@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EightEx</title>
     <link type="image/x-icon" href="img/icon/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="{{ asset('css/style.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/other.css') }}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -51,7 +52,7 @@
                         </svg>
                     </a>
                 </div>
-                <button type="button" class="menu__icon">
+                <button type="button" class="menu__icon" id="header-btn-menu">
                     <span></span>
                 </button>
                 <div class="header__menu menu">
@@ -202,6 +203,7 @@
         </section>
 
         <section class="scale">
+            <h3 class="scale-mobile-title">Нам доверяют</h3>
             <div class="scale__container_b container_b container">
                 <div class="scale__partners partners-scale">
                     <div class="partners-scale__items">
@@ -241,7 +243,10 @@
         </div>
 
         <section class="reviews">
-            <h2 class="label__title text-center">Отзывы</h2>
+            <div class="review-title">
+                <h2 class="label__title text-center">Отзывы</h2>
+                <b class="believe accent">Доверие</b>
+            </div>
             <div class="reviews__container_b container_b container">
                 <div class="reviews__items">
                     <div class="reviews__item">
@@ -249,7 +254,7 @@
                             <h2 class="trigger__title">Заслужили доверие не словами, а делом</h2>
                             <p class="trigger__text">
                                 Помогли заработать селлерам на маркетплейсах более
-                                <span>100 000 000 рублей</span>.
+                                <span class="review-info">100 000 000 рублей</span>.
                             </p>
                         </div>
                     </div>
@@ -416,6 +421,9 @@
                                 <a href="#" class="footer__menu-link menu-link">Почта</a>
                             </li>
                         </ul>
+                        <button type="button" class="menu__icon" id="btn-menu-footer">
+                            <span></span>
+                        </button>
                         <div class="footer__phones">
                             <a href="tel:{{__('site.tel')}}" class="footer__menu-link menu-link footer__menu-link_phone menu-link_phone">
                                 8 967 555 71 43
@@ -431,8 +439,6 @@
 <script src=" {{ asset('js/jquery-3.6.1.min.js') }}"></script>
 <script src=" {{ asset('js/app.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
 @include('script')

@@ -42,17 +42,40 @@
 
 <script src="{{ asset('js/siema.min.js') }}"></script>
 <script>
-    new Siema({
-        selector: '.siema',
-        perPage: 3,
-        startIndex: 0,
-        easing: 'ease-out',
-        loop: false,
-        rtl: false,
-        draggable: true,
-        multipleDrag: true,
-    });
-    var items = document.getElementById('siema-container');
-    var nextItem = items.nextElementSibling;
-    nextItem.classList.add('siema-control');
+    siemaWork()
+    window.addEventListener('resize', function(event) {
+        siemaWork()
+    }, true);
+    function siemaWork() {
+        if (window.screen.width > 700) {
+            new Siema({
+                selector: '.siema',
+                perPage: 3,
+                startIndex: 0,
+                easing: 'ease-out',
+                loop: false,
+                rtl: false,
+                draggable: true,
+                multipleDrag: true,
+            });
+            let items = document.getElementById('siema-container');
+            let nextItem = items.nextElementSibling;
+            nextItem.classList.add('siema-control');
+        } else {
+            new Siema({
+                selector: '.siema',
+                duration: 500,
+                perPage: 1,
+                startIndex: 1,
+                easing: 'ease-out',
+                loop: false,
+                rtl: false,
+                draggable: true,
+                multipleDrag: true,
+            });
+            let items = document.getElementById('siema-container');
+            let nextItem = items.nextElementSibling;
+            nextItem.classList.add('siema-control');
+        }
+    }
 </script>
