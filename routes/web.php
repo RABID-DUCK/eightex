@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\MailPageConrtoller;
 use \App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,8 @@ Route::get('/clear-cache', function () {
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/', [IndexController::class, 'index']);
+
+Route::get('/', [IndexController::class, 'index'])->name('main.page');
 Route::resource('application', ApplicationController::class)->except([
     'index',
     'create',
@@ -37,6 +39,7 @@ Route::resource('application', ApplicationController::class)->except([
 
 Route::get('/getLeads', [ApplicationController::class, 'getLeadsAdmin']);
 
+Route::get('/mail', [MailPageConrtoller::class, 'index'])->name('mail.page');
 
 
 require __DIR__.'/auth.php';

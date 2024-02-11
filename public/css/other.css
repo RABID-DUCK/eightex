@@ -10,9 +10,113 @@
   width: 113%;
 }
 
+.img-mail {
+  max-height: 1024px;
+  width: 100%;
+}
+
+header .first-screen__container {
+  max-width: 100%;
+}
+header .delivery-from-china h1 {
+  font-size: 48px;
+}
+header .delivery-from-china p {
+  font-size: 24px;
+}
+
+.close-accordion {
+  display: none;
+}
+
+.address-delivery {
+  color: #FFD704;
+  padding: 27px;
+  border: 1px solid #FFD704;
+  border-radius: 12px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.address-delivery p {
+  margin-bottom: 0;
+}
+
 main {
   overflow: hidden;
   margin-top: 70px;
+}
+
+.mail-page h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.mail-page iframe {
+  width: 440px;
+  height: 633px;
+}
+.mail-page .faq-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.mail-page .faq-wrapper .faq-content {
+  margin-left: 41px;
+}
+.mail-page .faq-wrapper .faq-content h2 {
+  margin-bottom: 40px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion {
+  border-bottom: 1px solid lightgray;
+  width: 554px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion button {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion button[aria-expanded=true] {
+  margin-bottom: -15px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion button[aria-expanded=true] .plus-accordion {
+  display: none;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion button[aria-expanded=true] .close-accordion {
+  display: block;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .plus-accordion {
+  width: 20px;
+  height: 20px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .plus-accordion:hover {
+  cursor: pointer;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .close-accordion {
+  width: 32px;
+  height: 32px;
+  margin-right: -7px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .btn-block {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .btn-block:focus {
+  box-shadow: none;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .header-item-accordion .btn-block span {
+  margin-top: -14px;
+}
+.mail-page .faq-wrapper .faq-content .item-accordion .collapse {
+  padding-bottom: 30px;
+  transition: none;
+  color: rgba(60, 60, 67, 0.85);
 }
 
 .header {
