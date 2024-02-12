@@ -22,4 +22,29 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('body').classList.add('lock')
         }
     })
+
+    $('#open_popup').click(function() {
+        $('#popup').addClass('active')
+
+        $('#door').click(function () {
+            $('.check-1').addClass('show')
+            $('#door').addClass('hide')
+
+            if($('#sdek').hasClass('hide')) {
+                $('#sdek').removeClass('hide')
+                $('.check-2').removeClass('show')
+            }
+        })
+
+        $('#sdek').click(function () {
+            $('.check-2').addClass('show')
+            $('#sdek').addClass('hide')
+
+            if($('.check-1').hasClass('show')) {
+                $('.check-1').removeClass('show')
+                $('#door').removeClass('hide')
+            }
+        })
+    })
+
 })

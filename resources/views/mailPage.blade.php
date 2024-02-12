@@ -1,6 +1,19 @@
 @extends('layouts.main')
 
 @section('content')
+    <style>
+        @media (max-width: 810px) {
+            .menu__icon{
+                right: 15px;
+            }
+
+            .menu__icon::before, .menu__icon::after, .menu__icon span{
+                background-color: white;
+                color: white;
+            }
+        }
+    </style>
+
     <header class="header">
         <div class="header__block"></div>
         <div class="header__wrapper position-absolute">
@@ -67,7 +80,7 @@
                     <form action="#" class="first-screen__form form-first-screen form" id="form_1">
                         <div class="form__items" style="height: auto;">
                             <a href="#popup" class="btn-submit_form1 form-first-screen__button
-                            form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;">Оставить заявку</a>
+                            form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;" id="open_popup">Оставить заявку</a>
                         </div>
                     </form>
                 </div>

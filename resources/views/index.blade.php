@@ -31,7 +31,7 @@
                                     <a href="#" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
                                 </li>
                                 <li class="header__menu-item menu-item">
-                                    <a href="#popup" class="header__menu-link menu-link popup-link">Оставить заявку</a>
+                                    <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup">Оставить заявку</a>
                                 </li>
                                 <li class="header__menu-item menu-item">
                                     <a href="#" data-goto=".team" class="header__menu-link menu-link">О компании</a>
@@ -68,7 +68,7 @@
                     <form action="#" class="first-screen__form form-first-screen form" id="form_1">
                         <div class="form__items" style="height: auto;">
                             <a href="#popup" class="btn-submit_form1 form-first-screen__button
-                            form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;">Оставить заявку</a>
+                            form__button button header__menu-link menu-link popup-link" style="text-align: center; color: white;" id="open_popup">Оставить заявку</a>
                         </div>
                     </form>
                 </div>
@@ -297,76 +297,6 @@
                 </form>
             </div>
         </section>
-    </div>
-
-    <div class="popup" id="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-                <div class="popup__header">
-                    <h2 class="popup__title">Расчёт доставки груза</h2>
-                    <div class="popup__text">
-                        Заполните форму и наш менеджер свяжется с вами, чтобы ответить на любые ваши вопросы
-                    </div>
-                    <div class="popup-close close-popup">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
-                    </div>
-                </div>
-                <form class="popup__form" id="form_3">
-                    <div class="popup__item item-popup">
-                        <h3 class="item-popup__title">Какой товар нужно привезти?</h3>
-                        <p class="item-popup__text popup__text">Укажите наименование или категорию товара.</p>
-                        <input name="product_name" placeholder="Например: брюки, зонт, комплектующие для станка."  type="text" name="product" class="item-popup__field form__input">
-                    </div>
-                    <div class="popup__item item-popup">
-                        <h3 class="item-popup__title">Вес, кг</h3>
-                        <p class="item-popup__text popup__text">
-                            Укажите примерный общий вес товара с упаковкой. Если не знаете вес упаковки, укажите вес без её учета.
-                        </p>
-                        <input name="product_weight" placeholder="Например: 100" type="number" name="weight" class="item-popup__field form__input">
-                    </div>
-                    <div class="popup__item item-popup">
-                        <h3 class="item-popup__title">Объём, м3</h3>
-                        <p class="item-popup__text popup__text">
-                            Укажите общий объём с упаковкой. Если не знаете объём упаковки, укажите объём без её учёта.
-                        </p>
-                        <input name="product_volume" placeholder="Например: 0,7" type="number" name="size" class="item-popup__field form__input">
-                    </div>
-                    <div class="popup__item item-popup">
-                        <h3 class="item-popup__title">Ваше имя</h3>
-                        <input placeholder="Имя" type="text" class="item-popup__field form__input" name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');">
-                    </div>
-                    <div class="popup__item item-popup">
-                        <h3 class="item-popup__title">Ваш телефон</h3>
-                        <input name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" placeholder="В формате 81234567890" type="text" class="item-popup__field form__input form__input_phone" >
-                    </div>
-                    <button  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup thanks" id="popup-thanks">
-        <div class="popup__body thanks__body">
-            <div class="popup__content thanks__content">
-                <div class="popup-close close-popup thanks-popup-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
-                </div>
-                <div class="thanks__info">
-                    <div class="thanks__icon"></div>
-                    <h2 class="thanks__title">
-                        Спасибо, мы
-                        уже обрабатываем вашу заявку!
-                    </h2>
-                    <p class="thanks__text">
-                        А пока, подпишитесь на наш Telegram канал, там мы публикуем свежие новости о бизнесе с Китаем
-                    </p>
-                </div>
-                <div class="thanks__image">
-                    <picture><source srcset="img/telegram_channel.webp" type="image/webp"><img src="img/telegram_channel.png" alt="Телеграм канал 'Карго доставка из Китая'"></picture>
-                    <a href="https://t.me/eightex" target="_blank" class="thanks__btn button">Перейти на канал</a>
-                </div>
-            </div>
-        </div>
     </div>
 </main>
 

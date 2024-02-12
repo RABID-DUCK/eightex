@@ -8,6 +8,22 @@
     width: 113%;
 }
 
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none;
+}
+
+.check-mark-popup.show{
+    margin-right: 10px;
+}
+
+.check-1, .check-2{
+    display: none;
+}
+
 .img-mail{
     max-height: 1024px;
     width: 100%;
@@ -49,6 +65,35 @@ header{
 
 }
 
+.popup{
+
+    input{
+        margin-top: 15px;
+    }
+
+    input[type="radio"]{
+        width: 24px;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    .type-delivery-popup{
+        justify-content: space-between;
+
+    }
+
+    .form-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        label{
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+    }
+}
+
 main{
     overflow: hidden;
     margin-top: 70px;
@@ -64,6 +109,7 @@ main{
     iframe{
         width: 440px;
         height: 633px;
+        border-radius: 17px;
     }
 
     .faq-wrapper{
@@ -498,6 +544,57 @@ iframe{
     }
 }
 
+@media (max-width: 1035px){
+    .faq-wrapper{
+        flex-direction: column;
+        align-items: center;
+
+        .faq-content{
+            margin-top: 40px;
+            margin-left: 0 !important;
+
+            h2{
+                text-align: center;
+            }
+        }
+    }
+
+    .header{
+
+        .img-mail{
+            min-height: 683px;
+        }
+
+        .first-screen__container{
+            top: -60px;
+            left: 14px;
+
+            .first-screen__wrapper{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .first-screen__content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    form{
+                        width: 100%;
+                    }
+
+                    .delivery-from-china{
+                        h1{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1020px) {
     .header__wrapper{
 
@@ -590,6 +687,23 @@ iframe{
     }
 }
 
+@media (max-width: 760px) {
+    .first-screen__container{
+        top: -103px !important;
+        left: 0 !important;
+
+        .delivery-from-china{
+            h1{
+                font-size: 26px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 739px) {
     .card__info_mobile{
@@ -633,6 +747,30 @@ iframe{
     }
 }
 
+@media (max-width: 720px) {
+    .first-screen__container{
+
+        form{
+            max-width: 274px !important;
+
+            a{
+                font-size: 14px;
+            }
+        }
+
+        .delivery-from-china{
+
+            h1{
+                margin-bottom: 10px;
+            }
+        }
+
+        .address-delivery{
+            font-size: 20px;
+        }
+    }
+}
+
 @media (max-width: 695px) {
     .about__card{
         height: 300px !important;
@@ -672,6 +810,17 @@ iframe{
 @media (max-width: 600px) {
     .first-screen__container{
         left: 35px;
+    }
+
+    .mail-page{
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        .item-accordion{
+            max-width: 450px;
+        }
     }
 }
 
@@ -765,13 +914,40 @@ iframe{
             display: none;
         }
     }
+
+    .popup{
+
+        .type-delivery-popup{
+            flex-direction: column;
+            align-items: start;
+
+            .form-group{
+
+                &:last-child{
+                    margin-bottom: 0 !important;
+                }
+
+                &:first-child{
+                    margin-bottom: 15px !important;
+                }
+
+                input{
+                    height: 24px;
+                }
+            }
+        }
+
+        .item-popup__title{
+            margin-bottom: 10px;
+        }
+    }
 }
 
 @media (max-width: 500px) {
     .first-screen__container{
         padding-left: 20px;
         padding-right: 20px;
-        top: 80px;
+        top: -80px !important;
 
         .first-screen__content{
             padding-left: 10px;
@@ -781,6 +957,10 @@ iframe{
         form{
             max-width: 274px;
             margin: 0;
+        }
+
+        .address-delivery{
+            margin-top: 20px;
         }
     }
     .delivery-from-china{
@@ -844,6 +1024,36 @@ iframe{
         right: 50px;
         width: 30px;
     }
+
+    .accordion{
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 450px;
+
+        .item-accordion{
+            width: 100% !important;
+        }
+
+        button[aria-expanded="false"]{
+            img{
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .mail-page{
+        iframe{
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .mail-page{
+        iframe{
+            max-width: 360px;
+        }
+    }
 }
 
 @media (max-width: 405px) {
@@ -853,3 +1063,5 @@ iframe{
         }
     }
 }
+
+
