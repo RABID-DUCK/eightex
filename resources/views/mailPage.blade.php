@@ -2,6 +2,10 @@
 
 @section('content')
     <style>
+        body{
+            overflow-x: hidden;
+        }
+
         @media (max-width: 810px) {
             .menu__icon{
                 right: 15px;
@@ -109,6 +113,19 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div class="chat-wrapper d-flex">
+            <div class="write-us-chat d-flex">
+                <img src="{{asset('/img/chat-write.png')}}" alt="Консультант">
+                <p>Здравствуйте! Готов помочь вам. Напишите мне, если у вас появятся вопросы.</p>
+            </div>
+
+            
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="32" fill="#FFD704"/>
+                <path d="M24.44 35.9111V24.8889H17.6C15.62 24.8889 14 26.4889 14 28.4444V39.1111C14 41.0667 15.62 42.6667 17.6 42.6667H19.4V48L24.8 42.6667H33.8C35.78 42.6667 37.4 41.0667 37.4 39.1111V35.8756C37.2817 35.9006 37.161 35.9132 37.04 35.9129H24.44V35.9111ZM46.4 16H30.2C28.22 16 26.6 17.6 26.6 19.5556V33.7778H39.2L44.6 39.1111V33.7778H46.4C48.38 33.7778 50 32.1796 50 30.2222V19.5556C50 17.6 48.38 16 46.4 16Z" fill="black"/>
+            </svg>
         </div>
 
     </header>
