@@ -591,6 +591,22 @@ iframe{
     video{
         width: 104%;
     }
+
+    .chat-wrapper{
+        right: 100px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .chat-wrapper{
+        width: 100px;
+        right: 20px;
+        bottom: 17px;
+
+        .write-us-chat{
+            display: none !important;
+        }
+    }
 }
 
 @media (max-width: 1170px) {
