@@ -587,6 +587,56 @@ iframe{
     font-size: 10px;
 }
 
+.header-mail{
+
+}
+
+@media (max-width: 1700px) {
+    .header-mail{
+        .first-screen__container{
+            left: 90px;
+        }
+    }
+}
+
+@media (max-width: 1670px) {
+    .header-mail{
+        .address-delivery{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .header-mail{
+        .first-screen__content {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+        }
+    }
+}
+
+@media (max-width: 1350px){
+    .header-mail{
+        .first-screen__container{
+            width: 90%;
+
+            .first-screen__content{
+                flex: 0 1 46%;
+
+                h1{
+                    font-size: 43px;
+                }
+
+                p{
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1300px) {
     video{
         width: 104%;
@@ -595,13 +645,19 @@ iframe{
     .chat-wrapper{
         right: 100px;
     }
+
+    .header-mail{
+        .first-screen__content{
+            margin-right: 30px;
+        }
+    }
 }
 
 @media (max-width: 1250px) {
     .chat-wrapper{
         width: 100px;
-        right: 20px;
-        bottom: 17px;
+        right: 81px !important;
+        bottom: 12px;
 
         .write-us-chat{
             display: none !important;
@@ -631,6 +687,10 @@ iframe{
                 text-align: center;
             }
         }
+    }
+
+    .chat-wrapper{
+        right: 95px;
     }
 
     .header{
@@ -726,6 +786,20 @@ iframe{
 @media (max-width: 825px) {
     .menu-item_phone{
         margin-top: 0;
+    }
+
+    .header-mail{
+        .first-screen__content{
+            margin-right: 0;
+        }
+
+        .address-delivery{
+            margin-left: 25px;
+        }
+    }
+
+    .chat-wrapper {
+        right: 60px !important;
     }
 }
 
@@ -1014,6 +1088,35 @@ iframe{
         .item-popup__title{
             margin-bottom: 10px;
         }
+    }
+
+    .header-mail{
+        .delivery-from-china{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+
+            h1{
+                font-size: 24px !important;
+            }
+
+            p{
+                font-size: 14px !important;
+            }
+        }
+
+        .first-screen__form{
+            max-width: 100% !important;
+            margin-left: 21px;
+
+            a{
+                width: 100%;
+            }
+        }
+    }
+
+    .chat-wrapper{
+        right: 35px !important;
     }
 }
 

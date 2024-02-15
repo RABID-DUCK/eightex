@@ -18,7 +18,7 @@
         }
     </style>
 
-    <header class="header">
+    <header class="header header-mail">
         <div class="header__block"></div>
         <div class="header__wrapper position-absolute">
             <div class="header__container container">
@@ -127,14 +127,14 @@
             </svg>
         </div>
 
-        <div class="chat-content">
-            <div class="chat-wrap-text"></div>
-            <div class="write-test-chat">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Введите сообщение...">
+{{--  Чат модалка      <div class="chat-content">--}}
+{{--            <div class="chat-wrap-text"></div>--}}
+{{--            <div class="write-test-chat">--}}
+{{--                <textarea name="" id="" cols="30" rows="10" placeholder="Введите сообщение...">--}}
 
-                </textarea>
-            </div>
-        </div>
+{{--                </textarea>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
     </header>
 
@@ -152,7 +152,7 @@
                         <div class="header-item-accordion" id="headingOne">
                             <b class="mb-0 d-flex justify-between">
                                 <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
+                                    Если я сделал ошибку в адресе?
                                     <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
                                     <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
                                 </button>
@@ -169,7 +169,7 @@
                         <div class="header-item-accordion" id="headingTwo">
                             <b class="mb-0 d-flex justify-between">
                                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
+                                    Если нет трек номера?
                                     <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
                                     <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
                                 </button>
@@ -181,6 +181,75 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="item-accordion">
+                        <div class="header-item-accordion" id="headingThree">
+                            <b class="mb-0 d-flex justify-between">
+                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Если нет трек номера?
+                                    <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
+                                    <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
+                                </button>
+                            </b>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div>
+                                Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-accordion">
+                        <div class="header-item-accordion" id="headingFour">
+                            <b class="mb-0 d-flex justify-between">
+                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Если сделал ошибку в анкет?
+                                    <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
+                                    <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
+                                </button>
+                            </b>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div>
+                                Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-accordion">
+                        <div class="header-item-accordion" id="headingFive">
+                            <b class="mb-0 d-flex justify-between">
+                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Если со мной никто не связался?
+                                    <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
+                                    <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
+                                </button>
+                            </b>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div>
+                                Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-accordion">
+                        <div class="header-item-accordion" id="headingSix">
+                            <b class="mb-0 d-flex justify-between">
+                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Если оставил заявку, но передумал?
+                                    <img class="plus-accordion" src="{{asset('/img/plus.png')}}" alt="plus">
+                                    <img class="close-accordion" src="{{asset('/img/close-accordion.png')}}" alt="plus">
+                                </button>
+                            </b>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                            <div>
+                                Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
