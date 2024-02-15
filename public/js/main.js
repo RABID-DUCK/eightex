@@ -47,4 +47,25 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
+    $('#icon-chat').click(function () {
+        $('#icons-chat').addClass('show')
+        $('#wrapper-chat').addClass('active-icons')
+
+        if($('#wrapper-chat').hasClass('active-icons')){
+            $('#icon-chat').click(function () {
+                $('#chat-content').addClass('show')
+                $('#wrapper-chat').addClass('hide')
+            })
+        }
+    })
+
+    $('#close-chat').click(function () {
+        $('#chat-content').removeClass('show')
+    })
+
+    $('#close-icons-chat').click(function () {
+        $('#icons-chat').removeClass('show')
+        $('#wrapper-chat').removeClass('active-icons')
+    })
+
 })
