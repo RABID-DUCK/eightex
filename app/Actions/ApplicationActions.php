@@ -50,6 +50,7 @@ class ApplicationActions
     }
     protected function saveModelAndSheet(){
         $requestArr = $this->requestArr;
+        dd($requestArr);
         $dataApplication = [
             [
                 date("H:i d.m.Y"),
@@ -58,22 +59,29 @@ class ApplicationActions
             ]
         ];
         $applicationModel = new Application();
-        $applicationModel->name =  Arr::get($requestArr, 'name','');
-        $applicationModel->phone =  Arr::get($requestArr, 'phone','');
 
         if(Arr::exists($requestArr, 'data')){
-            $product_name =   Arr::get($requestArr,'data.product_name' ,'');
-            $product_weight = Arr::get($requestArr,'data.product_weight' ,'');
-            $product_volume = Arr::get($requestArr, 'data.product_volume' ,'');
+            $track_number =   Arr::get($requestArr,'data.track_number' ,'');
+            $type_delivery = Arr::get($requestArr,'data.type_delivery' ,'');
+            $address = Arr::get($requestArr, 'data.address' ,'');
+            $fio = Arr::get($requestArr, 'data.fio' ,'');
+            $phone = Arr::get($requestArr, 'data.phone' ,'');
+            $description = Arr::get($requestArr, 'data.description' ,'');
             $otherData = [
-                $product_name,
-                $product_weight,
-                $product_volume,
+                $track_number,
+                $type_delivery,
+                $address,
+                $fio,
+                $phone,
+                $description,
             ];
             $dataApplication[0] = array_merge($dataApplication[0],$otherData);
-            $applicationModel->product_name =  $product_name;
-            $applicationModel->product_weight =  $product_weight;
-            $applicationModel->product_volume =  $product_volume;
+            $applicationModel->track_number =  $track_number;
+            $applicationModel->type_delivery =  $type_delivery;
+            $applicationModel->address =  $address;
+            $applicationModel->fio =  $fio;
+            $applicationModel->phone =  $phone;
+            $applicationModel->description =  $description;
         }
         $applicationModel->save();
         foreach ($dataApplication[0] as $key=>$value ){
@@ -116,9 +124,12 @@ class ApplicationActions
                     $lead = $leadsService->addOne($lead);
                     //  $lead =$leadsService->updateOne($lead);
 
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559481",Arr::get($this->requestArr, 'data.product_volume' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559479",Arr::get($this->requestArr,'data.product_weight' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.product_name' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559481",Arr::get($this->requestArr, 'data.track_number' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559479",Arr::get($this->requestArr,'data.type_delivery' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.address' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.fio' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.phone' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.description' ,''));
 
                     // create contact
                     $contact = new ContactModel();

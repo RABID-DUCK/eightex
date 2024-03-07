@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/getLeads/{page}/{range}', [\App\Http\Controllers\ApplicationController::class, 'getLeads']);
 
 Route::post('/sendMessageChat', [\App\Http\Controllers\ChatController::class, 'sendMessageToAmoCRM']);
+Route::post('/sendMessageChat', [\App\Http\Controllers\ChatController::class, 'sendMessageToAmoCRM']);
 Route::get('/getMessage', [\App\Http\Controllers\ChatController::class, 'getMessagesFromAmoCRM']);

@@ -1,3 +1,8 @@
+*{
+    font-family: "Gotham Pro", serif;
+    font-weight: 400;
+}
+
 .card__info_mobile{
     display: none;
 }
@@ -14,6 +19,20 @@
 
 .hide{
     display: none;
+}
+
+.reviews__item{
+    width: 319px;
+    min-height: 266px;
+    flex: none;
+
+    .reviews__trigger, .item-review__wrapper{
+        padding: 20px 36px 20px 20px;
+    }
+
+    .trigger__title{
+        font-size: 24px;
+    }
 }
 
 .check-mark-popup.show{
@@ -280,6 +299,13 @@ main{
     .write-us-chat{
         display: none !important;
     }
+}
+
+.carousel-control-prev {
+    left: -20px !important;
+}
+.carousel-control-next {
+    right: -20px !important;
 }
 
 .chat-content{
@@ -673,6 +699,15 @@ iframe{
 
     .label__title{
         margin-bottom: 40px;
+    }
+
+    .reviews__container_b{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .reviews__items{
+        justify-content: space-between;
     }
 }
 
@@ -1116,6 +1151,7 @@ iframe{
             font-weight: 600;
             font-size: 20px;
         }
+
     }
 
     .review-title{

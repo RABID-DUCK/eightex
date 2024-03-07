@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AmoToken;
+use DateTimeInterface;
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
@@ -74,12 +75,24 @@ class ChatController extends Controller
         $table->save();
     }
 
-    function sendMessageToAmoCRM($message, $lead_id) {
-        global $api_url, $api_headers;
+    function sendMessageToAmoCRM(Request $request) {
+        $data = $request->validate(['message' => 'required']);
+
+        $lead_id = 26670724;
+        $api_url = 'https://your_subdomain.amocrm.com/private/v2/';
+        $table = AmoToken::where('id', 2)->first();
+        $api_token = $table->access_token;
+
+        $this->registerChannel();
+
+        $api_headers = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $api_token
+        );
 
         $post_data = array(
             'LEAD_ID' => $lead_id,
-            'TEXT' => $message
+            'TEXT' => $data['message']
         );
 
         $ch = curl_init();
@@ -95,8 +108,14 @@ class ChatController extends Controller
         return json_decode($response, true);
     }
 
-    function getMessagesFromAmoCRM($lead_id) {
-        global $api_url, $api_headers;
+    function getMessagesFromAmoCRM() {
+        $lead_id = 26670724;
+        $api_url = 'https://your_subdomain.amocrm.com/private/v2/';
+        $api_token = 'your_api_token';
+        $api_headers = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $api_token
+        );
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $api_url . 'leads/' . $lead_id . '/messages');
@@ -107,5 +126,75 @@ class ChatController extends Controller
         curl_close($ch);
 
         return json_decode($response, true);
+    }
+
+    private function registerChannel(){
+        $table = AmoToken::where('id', 2)->first();
+        $client_secret = $table->client_secret;
+
+        $secret = $client_secret;
+        $method = 'POST';
+        $contentType = 'application/json';
+        $date = date(DateTimeInterface::RFC2822);
+        $path = '/v2/origin/custom/f90ba33d-c9d9-44da-b76c-c349b0ecbe41/connect';
+
+        $url = "https://amojo.amocrm.ru" . $path;
+
+        $body = [
+            'account_id' => '28911a52-7a0b-43da-a60c-b1dbdc971699',
+            'title' => 'ScopeTitle', //Название вашего канала, отображаемое пользователю
+            'hook_api_version' => 'v2',
+        ];
+        $requestBody = json_encode($body);
+        $checkSum = md5($requestBody);
+
+        $str = implode("\n", [
+            strtoupper($method),
+            $checkSum,
+            $contentType,
+            $date,
+            $path,
+        ]);
+
+        $signature = hash_hmac('sha1', $str, $secret);
+
+        $headers = [
+            'Date' => $date,
+            'Content-Type' => $contentType,
+            'Content-MD5' => strtolower($checkSum),
+            'X-Signature' => strtolower($signature),
+        ];
+
+        $curlHeaders = [];
+        foreach ($headers as $name => $value) {
+            $curlHeaders[] = $name . ": " . $value;
+        }
+
+        echo $method . ' ' . $url . PHP_EOL;
+        foreach ($curlHeaders as $header) {
+            echo $header . PHP_EOL;
+        }
+        echo PHP_EOL . $requestBody . PHP_EOL;
+
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 5,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_POSTFIELDS => $requestBody,
+            CURLOPT_HTTPHEADER => $curlHeaders,
+        ]);
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        $info = curl_getinfo($curl);
+        curl_close($curl);
+        if ($err) {
+            $result = "cURL Error #:" . $err;
+        } else {
+            echo "Status: " . $info['http_code'] . PHP_EOL;
+            echo $response . PHP_EOL;
+        }
     }
 }

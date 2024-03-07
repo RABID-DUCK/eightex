@@ -1,4 +1,5 @@
 <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
 
     $.ajaxSetup({
         headers: {
@@ -6,7 +7,16 @@
         }
     });
 
+        $(".btn-submit_form1").click(function(e){
+            e.preventDefault();
+            if(!$('#popup').hasClass('active')) $('#popup').addClass('active');
+
+        });
+
+    })
+
     function sendAjax(data){
+        event.preventDefault()
         let target = $(event.target);
         target.prop("disabled", true);
         target.addClass('no-active')
@@ -45,11 +55,6 @@
     }
 
 
-    $(".btn-submit_form1").click(function(e){
-        e.preventDefault();
-        if(!$('#popup').hasClass('active')) $('#popup').addClass('active');
-
-    });
 
     $(".btn-submit_form2").click(function(e){
         e.preventDefault();
@@ -68,18 +73,20 @@
     $(".btn-submit_form3").click(function(e){
         e.preventDefault();
         var form = $("#form_3");
-        var name = form.find("input[name=name]").val();
-        var phone =form.find("input[name=phone]").val();
-        var product_name = form.find("input[name=product_name]").val();
-        var product_weight = form.find("input[name=product_weight]").val();
-        var product_volume = form.find("input[name=product_volume]").val();
+        var track_number = form.find("input[name=track_number]").val();
+        var type_delivery =form.find("input[name=type_delivery]").val();
+        var address = form.find("input[name=address]").val();
+        var fio = form.find("input[name=fio]").val();
+        var phone = form.find("input[name=phone]").val();
+        var description = form.find("input[name=description]").val();
         var data = {
-            name:name,
-            phone:phone,
             data:{
-                product_name:product_name,
-                product_weight:product_weight,
-                product_volume:product_volume,
+                track_number: track_number,
+                type_delivery: type_delivery,
+                address: address,
+                fio: fio,
+                phone: phone,
+                description: description
             }
         }
         let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
@@ -127,3 +134,4 @@
             });
     }
 </script>
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

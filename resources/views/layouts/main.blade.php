@@ -55,7 +55,7 @@
                                 <a href="#" class="footer__menu-link menu-link">Как мы работаем</a>
                             </li>
                             <li class="footer__menu-item menu-item">
-                                <a href="#" class="footer__menu-link menu-link" id="open_popup">Оставить заявку</a>
+                                <a href="#popup" class="footer__menu-link menu-link" onclick="openPup()">Оставить заявку</a>
                             </li>
                             <li class="footer__menu-item menu-item">
                                 <a href="#" class="footer__menu-link menu-link">О компании</a>
@@ -74,6 +74,33 @@
                 </div>
             </div>
             <a href="#" class="footer__policy">Политика конфиденциальности</a>
+
+            <script>
+                function openPup(){
+                    $('#popup').addClass('active')
+
+                    $('#door').click(function () {
+                        $('.check-1').addClass('show')
+                        $('#door').addClass('hide')
+
+                        if($('#sdek').hasClass('hide')) {
+                            $('#sdek').removeClass('hide')
+                            $('.check-2').removeClass('show')
+                        }
+                    })
+
+                    $('#sdek').click(function () {
+                        $('.check-2').addClass('show')
+                        $('#sdek').addClass('hide')
+
+                        if($('.check-1').hasClass('show')) {
+                            $('.check-1').removeClass('show')
+                            $('#door').removeClass('hide')
+                        }
+                    })
+                }
+            </script>
+
         </div>
     </div>
 </footer>
@@ -132,7 +159,7 @@
 
                 <div class="popup__item item-popup">
                     <h3 class="item-popup__title">Укажите номер телефона получателя</h3>
-                    <input placeholder="Например: 30.000" type="text" class="item-popup__field form__input" name="phone" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');">
+                    <input placeholder="Например: 30.000" type="text" class="item-popup__field form__input" name="phone">
                 </div>
 
                 <div class="popup__item item-popup">
@@ -140,7 +167,7 @@
                     <input name="description" placeholder="Например: Велосипед" type="text" class="item-popup__field form__input form__input_phone" >
                 </div>
 
-                <button  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>
+                <button id="btn-submit_form3"  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>
             </form>
         </div>
     </div>

@@ -1,3 +1,8 @@
+* {
+  font-family: "Gotham Pro", serif;
+  font-weight: 400;
+}
+
 .card__info_mobile {
   display: none;
 }
@@ -18,6 +23,69 @@
   display: none;
 }
 
+.review-button{
+  background-color: #FFD704;
+  border-radius: 2.1875rem;
+  padding: 0.25rem 0.4375rem;
+  font-weight: 500;
+  color: #000000;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  font-size: 16px;
+}
+
+.item-review__wrapper.open-review{
+  height: 100%;
+  transition: height 0.3s ease;
+}
+
+.item-review__wrapper.closing {
+  height: 249px;
+  padding: 20px 36px 0 20px !important;
+}
+
+.review-text {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+#reivew-0{
+  padding-bottom: 0;
+}
+
+#review-1.open-review{
+  height: 365px;
+}
+
+.doverie .reviews__trigger{
+  height: 250px !important;
+}
+
+#review-0 button{
+    margin-top: 25px;
+}
+
+.item-review__wrapper.s{
+  height: 267px;
+}
+
+.item-review__wrapper{
+  height: 249px;
+}
+
+.reviews__item {
+  width: 319px;
+  min-height: 266px;
+  flex: none;
+}
+.reviews__item .reviews__trigger, .reviews__item .item-review__wrapper {
+  padding: 20px 36px 20px 20px;
+}
+.reviews__item .trigger__title {
+  font-size: 24px;
+}
+
 .check-mark-popup.show {
   margin-right: 10px;
 }
@@ -27,7 +95,7 @@
 }
 
 .img-mail {
-  max-height: 1024px;
+  max-height: 954px;
   width: 100%;
 }
 
@@ -41,8 +109,24 @@ header .delivery-from-china p {
   font-size: 24px;
 }
 
+.mail-header-wrapper{
+  position: absolute;
+  top: 345px;
+  left: 200px;
+  max-width: 1300px;
+  width: 100%;
+}
+
 .close-accordion {
   display: none;
+}
+
+.delivery-from-china{
+  color: white;
+}
+
+.delivery-from-china{
+  width: 392px;
 }
 
 .address-delivery {
@@ -53,6 +137,8 @@ header .delivery-from-china p {
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: 24px;
+  width: 415px;
+  height: 280px;
 }
 .address-delivery p {
   margin-bottom: 0;
@@ -94,6 +180,17 @@ main {
   height: 633px;
   border-radius: 17px;
 }
+
+.faq-wrapper video{
+  width: 360px;
+  height: 633px;
+  border-radius: 17px;
+}
+
+.faq-video{
+  padding-top: 55px;
+}
+
 .mail-page .faq-wrapper {
   display: flex;
   justify-content: center;
@@ -160,6 +257,7 @@ main {
 .header {
   margin-top: 0;
   position: relative;
+  max-height: 1024px;
 }
 
 .chat-wrapper {
@@ -231,6 +329,14 @@ main {
 }
 .chat-wrapper.active-icons .write-us-chat {
   display: none !important;
+}
+
+.carousel-control-prev {
+  left: -20px !important;
+}
+
+.carousel-control-next {
+  right: -20px !important;
 }
 
 .chat-content {
@@ -316,9 +422,14 @@ body {
   color: white !important;
 }
 .header__wrapper .header__container {
-  max-width: 100%;
+  max-width: 1400px;
   margin-left: 200px;
 }
+
+.header__body{
+  justify-content: space-between;
+}
+
 .header__wrapper .header__menu-list li:not(li:last-child) {
   margin-right: 10px;
 }
@@ -335,8 +446,8 @@ body {
 .header__logo {
   z-index: 1;
   flex: none;
-  margin-right: 275px;
   margin-top: -7px;
+  margin-left: 200px;
 }
 
 .no-active {
@@ -362,7 +473,8 @@ iframe button {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 1024px;
+  height: 100%;
+  max-height: 955px;
   top: 0;
 }
 
@@ -565,6 +677,13 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 .reviews .label__title {
   margin-bottom: 40px;
 }
+.reviews .reviews__container_b {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.reviews .reviews__items {
+  justify-content: space-between;
+}
 
 .footer__body {
   padding: 30px;
@@ -578,6 +697,7 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 
 .footer__container {
   padding-bottom: 70px;
+  max-width: 1072px !important;
 }
 
 .politics {
@@ -598,6 +718,13 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     font-size: 20px;
   }
 }
+
+@media (max-width: 1510px) {
+  .mail-header-wrapper{
+    max-width: 1070px;
+  }
+}
+
 @media (max-width: 1450px) {
   .header-mail .first-screen__content {
     flex: 0 1 45%;
@@ -627,6 +754,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .header-mail .first-screen__content {
     margin-right: 30px;
   }
+
+  .mail-header-wrapper{
+    max-width: 1000px;
+  }
 }
 @media (max-width: 1250px) {
   .chat-wrapper {
@@ -637,12 +768,43 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .chat-wrapper .write-us-chat {
     display: none !important;
   }
+
+  .reviews__items{
+    flex-wrap: nowrap !important;
+  }
+
+  .mail-header-wrapper{
+    left: 130px;
+  }
 }
 @media (max-width: 1170px) {
   .header__wrapper .header__container {
     margin-left: 140px !important;
   }
+
+  .delivery-from-china h1{
+    font-size: 26px !important;
+  }
+
+  .delivery-from-china p{
+    font-size: 17px !important;
+  }
+
+  .address-delivery{
+    font-size: 14px !important;
+    height: 191px;
+  }
 }
+
+@media (max-width: 1150px){
+  .mail-header-wrapper .mail-header-content{
+    justify-content: flex-start !important;
+  }
+  .first-content-mail{
+    margin-right: 90px;
+  }
+}
+
 @media (max-width: 1035px) {
   .faq-wrapper {
     flex-direction: column;
@@ -682,6 +844,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .header .first-screen__container .first-screen__wrapper .first-screen__content .delivery-from-china h1 {
     text-align: center;
   }
+
+  .mail-header-wrapper{
+    max-width: 800px;
+  }
 }
 @media (max-width: 1020px) {
   .header__wrapper .header__container {
@@ -691,6 +857,22 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     width: 100% !important;
   }
 }
+
+@media(max-width: 1000px){
+  .reviews__items{
+    flex-wrap: wrap !important;
+  }
+
+  .card__title{
+    text-align: center;
+  }
+
+  .card__text{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 @media (max-width: 960px) {
   .header__wrapper .header__container {
     margin-left: 10px !important;
@@ -698,6 +880,14 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .about__card img {
     height: 100px;
   }
+
+  .mail-header-wrapper {
+    max-width: 750px;
+}
+
+.mail-header-wrapper form {
+  max-width: 20rem !important;
+}
 }
 @media (max-width: 919px) {
   .menu-item_phone {
@@ -708,6 +898,38 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .menu__icon {
     position: absolute;
+    right: 15px;
+  }
+
+  .mail-header-wrapper{
+    max-width: 500px;
+  }
+
+  .mail-header-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-content-mail{
+    margin-right: 0;
+    margin-left: 55px;
+  }
+
+  .mail-header-wrapper{
+    top: 200px;
+  }
+
+  .header__logo{
+    margin-right: 0;
+    margin-left: 60px;
+  }
+
+  .index-header{
+    left: 75px;
+  }
+
+  .index-header .first-content-mail{
+    margin-left: 0;
   }
 }
 @media (max-width: 850px) {
@@ -727,6 +949,9 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .chat-wrapper {
     right: 60px !important;
+  }
+  .btn-submit_form1{
+    font-size: 14px;
   }
 }
 @media (max-width: 790px) {
@@ -817,6 +1042,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     height: 300px !important;
     max-height: 300px !important;
   }
+
+  .index-header-wrap{
+    height: 680px;
+  }
 }
 @media (max-width: 680px) {
   .first-screen__container {
@@ -840,6 +1069,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .about-items .about__card:not(.about-items .about__card:first-child) {
     margin-top: 15px;
   }
+
+  .mail-header-wrapper{
+    padding-right: 100px;
+  }
 }
 @media (max-width: 600px) {
   .first-screen__container {
@@ -851,10 +1084,29 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .mail-page .item-accordion {
     max-width: 450px;
   }
+
+  .mail-header-wrapper{
+    left: 50px;
+    top: 300px;
+  }
+
+  .footer__container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 @media (max-width: 580px) {
   .first-screen__container {
     left: 25px;
+  }
+
+  .first-content-mail{
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .address-delivery{
+    width: 300px;
   }
 }
 @media (max-width: 550px) {
@@ -1016,6 +1268,7 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     position: absolute;
     right: 50px;
     width: 30px;
+    right: 15px;
   }
   .accordion {
     padding-left: 15px;
