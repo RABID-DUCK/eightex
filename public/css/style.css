@@ -5432,7 +5432,7 @@ body.lock {
   .card__stage {
     font-size: 1.30375rem !important;
     top: 1.125rem;
-    left: 1.125rem;
+    left: 26px;
   }
 
   .card_single {

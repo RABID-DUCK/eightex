@@ -127,9 +127,9 @@ class ApplicationActions
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559481",Arr::get($this->requestArr, 'data.track_number' ,''));
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559479",Arr::get($this->requestArr,'data.type_delivery' ,''));
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.address' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.fio' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.phone' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.description' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559478", Arr::get($this->requestArr,'data.fio' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559476", Arr::get($this->requestArr,'data.phone' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559475", Arr::get($this->requestArr,'data.description' ,''));
 
                     // create contact
                     $contact = new ContactModel();

@@ -28,7 +28,7 @@
                 <button type="button" class="menu__icon" id="header-btn-menu">
                     <span></span>
                 </button>
-                <div class="header__menu menu">
+                <div class="header__menu menu index-header-menu">
                     <nav class="header__menu-nav menu-nav">
                         <ul class="header__menu-list menu-list">
                             <li class="header__menu-item menu-item">
@@ -86,11 +86,11 @@
             <h2>Наша команда</h2>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{asset('/img/about/us_team.jpg')}}" class="d-block w-100" alt="Наша команда">
+                    <div class="carousel-item active" style="background-image: url('{{asset('/img/about/us_team.jpg')}}'); background-size: cover; background-position-y: -80px;">
+                        {{-- <img src="{{asset('/img/about/us_team.jpg')}}" class="d-block w-100" alt="Наша команда"> --}}
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{asset('/img/about/team.jpg')}}" class="d-block w-100" alt="Наша команда">
+                    <div class="carousel-item" style="background-image: url('{{asset('/img/about/team.jpg')}}'); background-size: cover;">
+                        {{-- <img src="{{asset('/img/about/team.jpg')}}" class="d-block w-100" alt="Наша команда"> --}}
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">

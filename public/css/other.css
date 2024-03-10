@@ -110,8 +110,8 @@ header .delivery-from-china p {
 }
 
 .mail-header-wrapper{
-  position: absolute;
-  top: 345px;
+  position: relative;
+  top: -637px;
   left: 200px;
   max-width: 1300px;
   width: 100%;
@@ -189,6 +189,18 @@ main {
 
 .faq-video{
   padding-top: 55px;
+}
+
+.mail-header-content{
+  padding-left: 10px;
+}
+
+.index-header .mail-header-content{
+  padding-left: 0;
+}
+
+.index-header-menu{
+  margin-right: 200px;
 }
 
 .mail-page .faq-wrapper {
@@ -409,6 +421,14 @@ body {
   background-color: #F5F5F5 !important;
 }
 
+.carousel-item{
+  height: 600px;
+}
+
+.mail-header__menu{
+  margin-right: 84px;
+}
+
 .page {
   margin-top: -135px;
 }
@@ -582,12 +602,20 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   height: 148px;
 }
 .about .about_images .card__stage {
-  width: 52px;
+  width: 50px;
   height: 26px;
   font-size: 11px !important;
   border-radius: 8px;
-  font-weight: 400;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 50px;
+  text-align: center;
 }
+
+.about .about_images .card__stage p{
+  font-weight: 600;
+}
+
 .about .about__card {
   width: 322px;
   height: 262px;
@@ -775,6 +803,7 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 
   .mail-header-wrapper{
     left: 130px;
+    top: -500px;
   }
 }
 @media (max-width: 1170px) {
@@ -802,6 +831,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .first-content-mail{
     margin-right: 90px;
+  }
+
+  .mail-header-wrapper{
+    top: -400px;
   }
 }
 
@@ -916,7 +949,7 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
 
   .mail-header-wrapper{
-    top: 200px;
+    top: -500px;
   }
 
   .header__logo{
@@ -1087,7 +1120,11 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 
   .mail-header-wrapper{
     left: 50px;
-    top: 300px;
+    top: -500px;
+  }
+
+  .header-mail .mail-header-wrapper{
+    left: 27px;
   }
 
   .footer__container{
@@ -1141,6 +1178,14 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     padding: 5px 5px 5px 5px;
     font-size: 16px;
     display: block;
+  }
+
+  .index-header{
+    top: -400px;
+  }
+
+  .index-header-wrap .header__logo{
+    margin-left: 35px;
   }
 }
 @media (max-width: 540px) {

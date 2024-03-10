@@ -23,7 +23,7 @@
         <div class="header__wrapper position-absolute">
             <div class="header__container container">
                 <div class="header__body">
-                    <div class="header__logo">
+                    <div class="header__logo" style="margin-left: 0;">
                         <a href="{{route('main.page')}}">
                             <svg width="134" height="31" viewBox="0 0 134 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.5409 0C14.3979 0 15.5273 0.282963 16.692 0.557653C18.8499 1.06732 20.7759 2.08003 22.5742 3.3575C22.9809 3.64708 23.0246 3.8622 22.7422 4.26927C20.6852 7.19322 18.6583 10.1304 16.6315 13.0726C16.5138 13.238 16.3928 13.4151 16.2399 13.6368C16.4701 13.7245 16.6668 13.8023 16.8584 13.8735C17.7676 14.2458 18.6953 14.5834 19.586 15.0004C25.8043 17.9045 24.8329 26.0723 20.502 28.9135C18.465 30.2489 16.2281 30.8744 13.8316 30.9787C8.71909 31.2004 4.1814 29.6929 0.252094 26.4496C0.171424 26.3834 0.0974763 26.3073 0 26.2179L7.4687 16.6899C7.27711 16.5906 7.13258 16.5095 6.99477 16.445C6.8267 16.3672 6.63679 16.3026 6.45697 16.2315C3.13101 14.9077 1.20333 12.591 1.18484 8.95057C1.15963 5.24723 2.91925 2.62941 6.26201 1.10041C7.93283 0.401043 9.72554 0.0273401 11.5409 0V0ZM7.52921 25.1606C7.69727 25.2483 7.78802 25.3012 7.88382 25.3409C9.78922 26.1331 11.861 26.4595 13.9223 26.2924C15.0427 26.2322 16.126 25.8761 17.0584 25.2615C18.9239 23.9989 19.2667 20.7837 16.8163 19.5609C15.6786 18.9949 14.4399 18.621 13.2349 18.1907C13.1399 18.1745 13.0424 18.1811 12.9505 18.2099C12.8587 18.2387 12.7752 18.2889 12.7072 18.3562C10.9863 20.5934 9.28546 22.8456 7.52921 25.1606ZM15.9323 5.41601C14.6938 4.92582 13.3775 4.65308 12.0434 4.61015C10.6468 4.56712 9.29722 4.74915 8.11238 5.5517C6.00152 6.98141 6.09563 9.91695 8.30734 11.1779C8.9527 11.5452 9.67705 11.7752 10.356 12.0863C10.7174 12.2518 10.9241 12.136 11.1476 11.8332C12.3812 10.1569 13.6349 8.49717 14.8819 6.83083C15.2214 6.37412 15.5576 5.91741 15.9273 5.41601H15.9323Z" fill="white"/>
@@ -40,7 +40,7 @@
                     <button type="button" class="menu__icon" id="header-btn-menu">
                         <span></span>
                     </button>
-                    <div class="header__menu menu">
+                    <div class="header__menu menu mail-header__menu">
                         <nav class="header__menu-nav menu-nav">
                             <ul class="header__menu-list menu-list">
                                 <li class="header__menu-item menu-item">
@@ -196,7 +196,7 @@
 
         <div class="faq-wrapper">
             <div class="faq-video">
-                <video src="{{asset('video/mail_video.mp4')}}" muted="muted" loop></video>
+                <video src="{{asset('video/mail_video.mp4')}}" autoplay muted></video>
                 {{-- <iframe src="https://www.youtube.com/embed/qRhuOS9th2c?si=gtNKWdyMHswQgkTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
             </div>
             <div class="faq-content">
