@@ -836,6 +836,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .mail-header-wrapper{
     top: -400px;
   }
+
+  .header-mail{
+    max-height: 800px;
+  }
 }
 
 @media (max-width: 1035px) {
@@ -1006,6 +1010,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     position: fixed;
     top: 50px;
     right: 20px;
+  }
+
+  .header-mail{
+    max-height: 748px;
   }
 }
 @media (max-width: 760px) {
@@ -1328,6 +1336,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   }
   .mail-page iframe {
     max-width: 400px;
+  }
+
+  .faq-video{
+    margin-left: 10px;
   }
 }
 @media (max-width: 410px) {

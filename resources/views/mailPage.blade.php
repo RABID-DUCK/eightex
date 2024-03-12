@@ -196,7 +196,9 @@
 
         <div class="faq-wrapper">
             <div class="faq-video">
-                <video src="{{asset('video/mail_video.mp4')}}" autoplay muted></video>
+                <video controls>
+                    <source src="{{asset('video/mail_video.mp4')}}" type="video/mp4">
+                </video>
                 {{-- <iframe src="https://www.youtube.com/embed/qRhuOS9th2c?si=gtNKWdyMHswQgkTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
             </div>
             <div class="faq-content">
