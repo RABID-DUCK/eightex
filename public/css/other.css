@@ -1140,7 +1140,7 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     padding-right: 0 !important;
   }
 
-  .lock .header-mail .menu__icon::before, .lock .menu__icon::after, .lock .menu__icon span {
+  .lock .header-mail .menu__icon::before, .lock .menu__icon::after, .lock .menu__icon span, .footer .menu__icon::before, .footer .menu__icon::after {
     background-color: black !important;
     color: black !important;
 }
@@ -1438,6 +1438,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 
 .item-review__title{
   margin-bottom: 0.8rem !important;
+}
+
+*{
+  transition: none !important;
 }
 
 }

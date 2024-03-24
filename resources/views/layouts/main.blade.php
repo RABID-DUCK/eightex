@@ -44,7 +44,7 @@
                         <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
                     </a>
 
-                    <button type="button" class="menu__icon" id="footer-btn-menu">
+                    <button type="button" class="menu__icon" id="foot-btn-menu" onclick="openHeader()">
                         <span></span>
                     </button>
                 </div>
@@ -99,6 +99,20 @@
                         }
                     })
                 }
+
+                function openHeader() {
+                    var headerMenu = document.querySelector('.header__menu');
+                    var footBtnMenu = document.getElementById('foot-btn-menu');
+
+                    headerMenu.classList.toggle('_active');
+                    footBtnMenu.classList.toggle('_active');
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('.close-popup').addEventListener("click", function() {
+                        document.getElementById('popup').classList.remove('active');
+                    });
+                });
             </script>
 
         </div>

@@ -72,7 +72,8 @@
             </div>
         </div>
 
-        <img class="img-mail" src="{{asset('/img/mail_page.png')}}" alt="Eightex">
+        {{-- <img class="img-mail" src="{{asset('/img/mail_page.png')}}" alt="Eightex"> --}}
+        <video class="first-iframe" src="{{asset('/video/EightEx_horizontal.mov')}}" autoplay muted></video>
 
         <div class="mail-header-wrapper">
             <div class="mail-header-content d-flex justify-content-between">
