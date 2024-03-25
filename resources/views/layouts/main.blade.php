@@ -35,6 +35,35 @@
 
 @yield('content')
 
+<div class="header__menu menu index-header-menu d-none" id="header-for-footer">
+    <nav class="header__menu-nav menu-nav">
+        <ul class="header__menu-list menu-list">
+            <li class="header__menu-item menu-item">
+                <a href="#" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
+            </li>
+            <li class="header__menu-item menu-item">
+                <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup">Оставить заявку</a>
+            </li>
+            <li class="header__menu-item menu-item">
+                <a href="#" data-goto=".team" class="header__menu-link menu-link">О компании</a>
+            </li>
+            <li class="header__menu-item menu-item">
+                <a href="{{route('mail.page')}}" class="header__menu-link menu-link">Почта</a>
+            </li>
+            <li class="header__menu-item menu-item header__menu-item_phone menu-item_phone">
+                <a href="tel:{{__('site.tel')}}" class="header__menu-phone menu-phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                    </svg>
+                </a>
+                <a href="tel:{{__('site.tel')}}" class="header__menu-link menu-link header__menu-link_phone menu-link_phone">
+                    8 967 555 71 43
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__body">
@@ -101,11 +130,14 @@
                 }
 
                 function openHeader() {
-                    var headerMenu = document.querySelector('.header__menu');
+                    var headerMenu = document.getElementById('header-for-footer');
                     var footBtnMenu = document.getElementById('foot-btn-menu');
+                    var phone = document.querySelector('.footer__phones');
 
                     headerMenu.classList.toggle('_active');
+                    headerMenu.classList.toggle('d-none');
                     footBtnMenu.classList.toggle('_active');
+                    phone.classList.toggle('d-none')
                 }
 
                 document.addEventListener('DOMContentLoaded', function() {
