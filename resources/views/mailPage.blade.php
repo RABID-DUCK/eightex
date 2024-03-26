@@ -44,13 +44,13 @@
                         <nav class="header__menu-nav menu-nav">
                             <ul class="header__menu-list menu-list">
                                 <li class="header__menu-item menu-item">
-                                    <a href="#" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
+                                    <a href="#mailPage" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
                                 </li>
                                 <li class="header__menu-item menu-item">
-                                    <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup">Оставить заявку</a>
+                                    <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup" onclick="openPup()">Оставить заявку</a>
                                 </li>
                                 <li class="header__menu-item menu-item">
-                                    <a href="#" data-goto=".team" class="header__menu-link menu-link">О компании</a>
+                                    <a href="#mailPage" data-goto=".team" class="header__menu-link menu-link">О компании</a>
                                 </li>
                                 <li class="header__menu-item menu-item">
                                     <a href="{{route('mail.page')}}" class="header__menu-link menu-link">Почта</a>
@@ -192,7 +192,7 @@
 
     </header>
 
-    <main class="mail-page">
+    <main class="mail-page" id="mailPage">
         <h1>Ответили на все твои вопросы в коротком видео</h1>
 
         <div class="faq-wrapper">

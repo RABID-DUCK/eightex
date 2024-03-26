@@ -32,13 +32,13 @@
                     <nav class="header__menu-nav menu-nav">
                         <ul class="header__menu-list menu-list">
                             <li class="header__menu-item menu-item">
-                                <a href="#" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
+                                <a href="#howWork" data-goto=".about" class="header__menu-link menu-link">Как мы работаем</a>
                             </li>
                             <li class="header__menu-item menu-item">
-                                <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup">Оставить заявку</a>
+                                <a href="#popup" class="header__menu-link menu-link popup-link" id="open_popup" onclick="openPup()">Оставить заявку</a>
                             </li>
                             <li class="header__menu-item menu-item">
-                                <a href="#" data-goto=".team" class="header__menu-link menu-link">О компании</a>
+                                <a href="#company" data-goto=".team" class="header__menu-link menu-link">О компании</a>
                             </li>
                             <li class="header__menu-item menu-item">
                                 <a href="{{route('mail.page')}}" class="header__menu-link menu-link">Почта</a>
@@ -127,7 +127,7 @@
         </section>
 
         <section class="about">
-            <div class="label-about text-center">
+            <div class="label-about text-center" id="howWork">
                 <h2 class="label__title">Как мы работаем</h2>
             </div>
             <div class="about__container_b container container_b">
@@ -197,7 +197,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section class="team" id="company">
             <div class="card__info card__info_full_team">
                 <h3 class="card__title">{{__('site.team_title')}}</h3>
                 <div class="card__text">
@@ -288,7 +288,7 @@
 
                     <input  name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');" type="text" placeholder="Ваше имя" class="form-contact__input  form__input text-left">
                     <input   name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" type="number" placeholder="+7 (999) 999-99-99" class="form-contact__input  form__input text-left">
-                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup">Оставить заявку</button>
+                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup" onclick="openPup()">Оставить заявку</button>
                     <p class="form-contact__text  form__text">Отправляя форму, вы соглашаетесь на обработку персональных данных,
                         защищенных <a href="#" class="politics">политикой конфиденциальности</a></p>
                 </form>

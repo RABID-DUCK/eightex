@@ -81,16 +81,16 @@
                     <nav class="footer__menu-nav">
                         <ul class="footer__menu-list menu-list">
                             <li class="footer__menu-item menu-item">
-                                <a href="#" class="footer__menu-link menu-link">Как мы работаем</a>
+                                <a href="#howWork" class="footer__menu-link menu-link">Как мы работаем</a>
                             </li>
                             <li class="footer__menu-item menu-item">
                                 <a href="#popup" class="footer__menu-link menu-link" onclick="openPup()">Оставить заявку</a>
                             </li>
                             <li class="footer__menu-item menu-item">
-                                <a href="#" class="footer__menu-link menu-link">О компании</a>
+                                <a href="#company" class="footer__menu-link menu-link">О компании</a>
                             </li>
                             <li class="footer__menu-item menu-item">
-                                <a href="#" class="footer__menu-link menu-link">Почта</a>
+                                <a href="{{route('mail.page')}}" class="footer__menu-link menu-link">Почта</a>
                             </li>
                         </ul>
 
