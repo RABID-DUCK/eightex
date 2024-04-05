@@ -165,52 +165,35 @@
             </div>
             <form class="popup__form" id="form_3">
                 <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Укажите трек номер отправителя</h3>
-                    <input name="track_number" placeholder="Например: NP98473959327"  type="text" class="item-popup__field form__input  ">
+                    <h3 class="item-popup__title">Какой товар нужно привезти?</h3>
+                    <p class="item-popup__text popup__text">Укажите наименование или категорию товара.</p>
+                    <input name="product_name" placeholder="Например: брюки, зонт, комплектующие для станка."  type="text" name="product" class="item-popup__field form__input">
+                </div>
+                
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Вес, кг</h3>
+                    <p class="item-popup__text popup__text">
+                        Укажите примерный общий вес товара с упаковкой. Если не знаете вес упаковки, укажите вес без её учета.
+                    </p>
+                    <input name="product_weight" placeholder="Например: 100" type="number" name="weight" class="item-popup__field form__input">
                 </div>
 
                 <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Выберите тип доставки</h3>
-                    <div class="type-delivery-popup d-flex">
-                        <div class="form-group">
-                            <input type="radio" id="door" name="type_delivery" class="door-check">
-                            <svg class="check-mark-popup check-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#14181F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M15 10L11 14L9 12" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-
-                            <label for="door">До двери 15-20 дней</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="sdek" name="type_delivery" class="sdek-check">
-                            <svg class="check-mark-popup check-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#14181F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M15 10L11 14L9 12" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-
-                            <label for="sdek">До пункта выдачи СДЭК 13-18 дней</label>
-                        </div>
-                    </div>
+                    <h3 class="item-popup__title">Объём, м3</h3>
+                    <p class="item-popup__text popup__text">
+                        Укажите общий объём с упаковкой. Если не знаете объём упаковки, укажите объём без её учёта.
+                    </p>
+                    <input name="product_volume" placeholder="Например: 0,7" type="number" name="size" class="item-popup__field form__input">
                 </div>
 
                 <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Укажите полный адрес ПВЗ (Страна, область, город, улица, дом)</h3>
-                    <input name="address" placeholder="Например: г. Москва, ул. Московская, д. 1." type="text" class="item-popup__field form__input">
+                    <h3 class="item-popup__title">Ваше имя</h3>
+                    <input placeholder="Имя" type="text" class="item-popup__field form__input" name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');">
                 </div>
 
                 <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Укажите ФИО получателя</h3>
-                    <input name="fio" placeholder="Например: Иванов Иван Иванович" type="text" class="item-popup__field form__input">
-                </div>
-
-                <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Укажите номер телефона получателя</h3>
-                    <input placeholder="Например: 30.000" type="text" class="item-popup__field form__input" name="phone">
-                </div>
-
-                <div class="popup__item item-popup">
-                    <h3 class="item-popup__title">Укажите описание товара</h3>
-                    <input name="description" placeholder="Например: Велосипед" type="text" class="item-popup__field form__input form__input_phone" >
+                    <h3 class="item-popup__title">Ваш телефон</h3>
+                    <input name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" placeholder="В формате 81234567890" type="text" class="item-popup__field form__input form__input_phone" >
                 </div>
 
                 <button id="btn-submit_form3"  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>

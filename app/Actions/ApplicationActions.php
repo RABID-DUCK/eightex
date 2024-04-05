@@ -61,27 +61,18 @@ class ApplicationActions
         $applicationModel = new Application();
 
         if(Arr::exists($requestArr, 'data')){
-            $track_number =   Arr::get($requestArr,'data.track_number' ,'');
-            $type_delivery = Arr::get($requestArr,'data.type_delivery' ,'');
-            $address = Arr::get($requestArr, 'data.address' ,'');
-            $fio = Arr::get($requestArr, 'data.fio' ,'');
-            $phone = Arr::get($requestArr, 'data.phone' ,'');
-            $description = Arr::get($requestArr, 'data.description' ,'');
+            $product_name =   Arr::get($requestArr,'data.product_name' ,'');
+            $product_weight = Arr::get($requestArr,'data.product_weight' ,'');
+            $product_volume = Arr::get($requestArr, 'data.product_volume' ,'');
             $otherData = [
-                $track_number,
-                $type_delivery,
-                $address,
-                $fio,
-                $phone,
-                $description,
+                $product_name,
+                $product_weight,
+                $product_volume,
             ];
             $dataApplication[0] = array_merge($dataApplication[0],$otherData);
-            $applicationModel->track_number =  $track_number;
-            $applicationModel->type_delivery =  $type_delivery;
-            $applicationModel->address =  $address;
-            $applicationModel->fio =  $fio;
-            $applicationModel->phone =  $phone;
-            $applicationModel->description =  $description;
+            $applicationModel->product_name =  $product_name;
+            $applicationModel->product_weight =  $product_weight;
+            $applicationModel->product_volume =  $product_volume;
         }
         $applicationModel->save();
         foreach ($dataApplication[0] as $key=>$value ){
@@ -116,13 +107,10 @@ class ApplicationActions
                     $lead->setName('Заявка с сайта #eightex_'.$applicationModel->id);
 
                     $lead = $leadsService->addOne($lead);
-
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559481",Arr::get($this->requestArr, 'data.track_number' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559479",Arr::get($this->requestArr,'data.type_delivery' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"557699", Arr::get($this->requestArr,'data.address' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"558497", Arr::get($this->requestArr,'data.fio' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559476", Arr::get($this->requestArr,'data.phone' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"557831", Arr::get($this->requestArr,'data.description' ,''));
+                    
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,$amoTokenModel->volume_id,Arr::get($this->requestArr, 'data.product_volume' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,$amoTokenModel->weight_id,Arr::get($this->requestArr,'data.product_weight' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,$amoTokenModel->product_id, Arr::get($this->requestArr,'data.product_name' ,''));
 
                     // create contact
                     $contact = new ContactModel();
