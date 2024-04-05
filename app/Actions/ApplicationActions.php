@@ -109,27 +109,20 @@ class ApplicationActions
                     $apiClient = $this->getApiClient($amoTokenModel);
                     $leadsService = $apiClient->leads();
                     $pipelinesService = $apiClient->pipelines();
-//                    $pipelinesCollection = $pipelinesService->get();
-//                    $pipelinesArr = $pipelinesCollection->all();
 
                     $lead = new LeadModel();
-//                    foreach ($pipelinesArr as $pipelines){
-//                        if($pipelines->name === $amoTokenModel->pipeline_name ){
-//                            $lead->setPipelineId($pipelines->id);
-//                        }
-//                    }
+
                     $lead->setPipelineId("1752544");
                     $lead->setName('Заявка с сайта #eightex_'.$applicationModel->id);
 
                     $lead = $leadsService->addOne($lead);
-                    //  $lead =$leadsService->updateOne($lead);
 
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559481",Arr::get($this->requestArr, 'data.track_number' ,''));
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559479",Arr::get($this->requestArr,'data.type_delivery' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559477", Arr::get($this->requestArr,'data.address' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559478", Arr::get($this->requestArr,'data.fio' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"557699", Arr::get($this->requestArr,'data.address' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"558497", Arr::get($this->requestArr,'data.fio' ,''));
                     $lead = $this->setLeadCustomFields($lead,$leadsService,"559476", Arr::get($this->requestArr,'data.phone' ,''));
-                    $lead = $this->setLeadCustomFields($lead,$leadsService,"559475", Arr::get($this->requestArr,'data.description' ,''));
+                    $lead = $this->setLeadCustomFields($lead,$leadsService,"557831", Arr::get($this->requestArr,'data.description' ,''));
 
                     // create contact
                     $contact = new ContactModel();

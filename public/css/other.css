@@ -973,6 +973,14 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .first-screen__container {
     left: 150px;
   }
+
+  .mail-header-wrapper {
+      top: -333px;
+  }
+
+  .index-header-menu {
+    margin-right: 78px;
+}
 }
 @media (max-width: 825px) {
   .menu-item_phone {
@@ -1309,6 +1317,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
     text-align: center;
     font-weight: 600;
   }
+
+  .about .card__content{
+    text-align: center;
+  }
 }
 @media (max-width: 473px) {
   .card__info_mobile_team {
@@ -1448,6 +1460,10 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
 @media (max-width: 410px) {
   .mail-page iframe {
     max-width: 360px;
+  }
+
+  .carousel-inner .carousel-item:last-child{
+    background-position-x: -33px;
   }
 }
 @media (max-width: 405px) {
