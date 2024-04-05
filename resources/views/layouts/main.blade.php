@@ -73,9 +73,6 @@
                         <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
                     </a>
 
-                    <button type="button" class="menu__icon" id="foot-btn-menu" onclick="openHeader()">
-                        <span></span>
-                    </button>
                 </div>
                 <div class="footer__menu menu">
                     <nav class="footer__menu-nav">

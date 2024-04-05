@@ -1276,6 +1276,13 @@ iframe .ytp-chrome-top, iframe .ytp-show-cards-title {
   .chat-wrapper {
     right: 35px !important;
   }
+
+  .footer__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 500px) {
   .first-screen__container {
