@@ -288,7 +288,7 @@
 
                     <input  name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');" type="text" placeholder="Ваше имя" class="form-contact__input  form__input text-left">
                     <input   name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" type="number" placeholder="+7 (999) 999-99-99" class="form-contact__input  form__input text-left">
-                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup" onclick="openPup()">Оставить заявку</button>
+                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup">Оставить заявку</button>
                     <p class="form-contact__text  form__text">Отправляя форму, вы соглашаетесь на обработку персональных данных,
                         защищенных <a href="#" class="politics">политикой конфиденциальности</a></p>
                 </form>

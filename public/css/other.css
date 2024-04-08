@@ -117,6 +117,10 @@ header .delivery-from-china p {
   width: 100%;
 }
 
+.mail-header-wrapper .form__items{
+  width: 274px;
+}
+
 .close-accordion {
   display: none;
 }
