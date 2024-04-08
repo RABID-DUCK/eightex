@@ -54,8 +54,6 @@
         });
     }
 
-
-
     $(".btn-submit_form2").click(function(e){
         e.preventDefault();
         var form = $("#form_2");

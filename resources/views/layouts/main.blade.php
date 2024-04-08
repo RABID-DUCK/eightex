@@ -64,89 +64,6 @@
     </nav>
 </div>
 
-<footer class="footer">
-    <div class="footer__container container">
-        <div class="footer__body">
-            <div class="footer__top">
-                <div class="footer__logo">
-                    <a href="#">
-                        <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
-                    </a>
-
-                </div>
-                <div class="footer__menu menu">
-                    <nav class="footer__menu-nav">
-                        <ul class="footer__menu-list menu-list">
-                            <li class="footer__menu-item menu-item">
-                                <a href="#howWork" class="footer__menu-link menu-link">Как мы работаем</a>
-                            </li>
-                            <li class="footer__menu-item menu-item">
-                                <a href="#popup" class="footer__menu-link menu-link" onclick="openPup()">Оставить заявку</a>
-                            </li>
-                            <li class="footer__menu-item menu-item">
-                                <a href="#company" class="footer__menu-link menu-link">О компании</a>
-                            </li>
-                            <li class="footer__menu-item menu-item">
-                                <a href="{{route('mail.page')}}" class="footer__menu-link menu-link">Почта</a>
-                            </li>
-                        </ul>
-
-                        <div class="footer__phones">
-                            <a href="tel:{{__('site.tel')}}" class="footer__menu-link menu-link footer__menu-link_phone menu-link_phone">
-                                8 967 555 71 43
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <a href="#" class="footer__policy">Политика конфиденциальности</a>
-
-            <script>
-                function openPup(){
-                    $('#popup').addClass('active')
-
-                    $('#door').click(function () {
-                        $('.check-1').addClass('show')
-                        $('#door').addClass('hide')
-
-                        if($('#sdek').hasClass('hide')) {
-                            $('#sdek').removeClass('hide')
-                            $('.check-2').removeClass('show')
-                        }
-                    })
-
-                    $('#sdek').click(function () {
-                        $('.check-2').addClass('show')
-                        $('#sdek').addClass('hide')
-
-                        if($('.check-1').hasClass('show')) {
-                            $('.check-1').removeClass('show')
-                            $('#door').removeClass('hide')
-                        }
-                    })
-                }
-
-                function openHeader() {
-                    var headerMenu = document.getElementById('header-for-footer');
-                    var footBtnMenu = document.getElementById('foot-btn-menu');
-                    var phone = document.querySelector('.footer__phones');
-
-                    headerMenu.classList.toggle('_active');
-                    headerMenu.classList.toggle('d-none');
-                    footBtnMenu.classList.toggle('_active');
-                    phone.classList.toggle('d-none')
-                }
-
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.querySelector('.close-popup').addEventListener("click", function() {
-                        document.getElementById('popup').classList.remove('active');
-                    });
-                });
-            </script>
-
-        </div>
-    </div>
-</footer>
 
 <div class="popup" id="popup">
     <div class="popup__body">
@@ -194,6 +111,80 @@
                 </div>
 
                 <button id="btn-submit_form3"  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" id="popup2">
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="popup__header">
+                <h2 class="popup__title">Расчёт доставки груза</h2>
+                <div class="popup__text mt-4">
+                    Заполните форму и наш менеджер свяжется с вами, чтобы ответить на любые ваши вопросы
+                </div>
+                <div class="popup-close close-popup">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                </div>
+            </div>
+            <form class="popup__form" id="form_3">
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите трек номер отправителя</h3>
+                    <input name="track_number" placeholder="Например: NP98473959327"  type="text" class="item-popup__field form__input  ">
+                </div>
+                
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Выберите тип доставки</h3>
+                    <div class="type-delivery-popup d-flex">
+                        <div class="form-group">
+                            <input type="radio" id="door" name="type_delivery" class="door-check">
+                            <svg class="check-mark-popup check-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#14181F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 10L11 14L9 12" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <label for="door">До двери 15-20 дней</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="sdek" name="type_delivery" class="sdek-check">
+                            <svg class="check-mark-popup check-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#14181F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 10L11 14L9 12" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <label for="sdek">До пункта выдачи СДЭК 13-18 дней</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите полный адрес ПВЗ (Страна, область, город, улица, дом)</h3>
+                    <input name="address" placeholder="Например: г. Москва, ул. Московская, д. 1." type="text" class="item-popup__field form__input">
+                </div>
+
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите ФИО получателя</h3>
+                    <input name="fio" placeholder="Например: Иванов Иван Иванович" type="text" class="item-popup__field form__input">
+                    {{-- <input placeholder="Имя" type="text" class="item-popup__field form__input" name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');"> --}}
+                </div>
+
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите номер телефона получателя</h3>
+                    <input name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" placeholder="Например: 89116393709" type="text" class="item-popup__field form__input form__input_phone" >
+                </div>
+
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите стоимость товара в рублях</h3>
+                    <input name="cost" placeholder="Например: 30.000" type="text" class="item-popup__field form__input form__input_phone" >
+                </div>
+                <div class="popup__item item-popup">
+                    <h3 class="item-popup__title">Укажите описание товара</h3>
+                    <input name="description" placeholder="Например: Велосипед" type="text" class="item-popup__field form__input form__input_phone" >
+                </div>
+
+                <button id="btn-submit_form3" style="max-width: 100%;"  type="submit" class="btn-submit_form3 item-popup__btn button popup-link">Оставить заявку</button>
             </form>
         </div>
     </div>

@@ -288,7 +288,7 @@
 
                     <input  name="name" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я\s]/g,'');" type="text" placeholder="Ваше имя" class="form-contact__input  form__input text-left">
                     <input   name="phone" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" type="number" placeholder="+7 (999) 999-99-99" class="form-contact__input  form__input text-left">
-                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup">Оставить заявку</button>
+                    <button  type="submit" class="btn-submit_form2 form-contact__button  form__button button popup-link" id="open_popup_thx">Оставить заявку</button>
                     <p class="form-contact__text  form__text">Отправляя форму, вы соглашаетесь на обработку персональных данных,
                         защищенных <a href="#" class="politics">политикой конфиденциальности</a></p>
                 </form>
@@ -296,4 +296,88 @@
         </section>
     </div>
 </main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <a href="#">
+                        <picture><source type="image/webp"><img src="img/first-screen/logo.png" alt="EightEx"></picture>
+                    </a>
+
+                </div>
+                <div class="footer__menu menu">
+                    <nav class="footer__menu-nav">
+                        <ul class="footer__menu-list menu-list">
+                            <li class="footer__menu-item menu-item">
+                                <a href="#howWork" class="footer__menu-link menu-link">Как мы работаем</a>
+                            </li>
+                            <li class="footer__menu-item menu-item">
+                                <a href="#popup" class="footer__menu-link menu-link" onclick="openPup()">Оставить заявку</a>
+                            </li>
+                            <li class="footer__menu-item menu-item">
+                                <a href="#company" class="footer__menu-link menu-link">О компании</a>
+                            </li>
+                            <li class="footer__menu-item menu-item">
+                                <a href="{{route('mail.page')}}" class="footer__menu-link menu-link">Почта</a>
+                            </li>
+                        </ul>
+
+                        <div class="footer__phones">
+                            <a href="tel:{{__('site.tel')}}" class="footer__menu-link menu-link footer__menu-link_phone menu-link_phone">
+                                8 967 555 71 43
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <a href="#" class="footer__policy">Политика конфиденциальности</a>
+
+            <script>
+                function openPup(){
+                    $('#popup').addClass('active')
+
+                    $('#door').click(function () {
+                        $('.check-1').addClass('show')
+                        $('#door').addClass('hide')
+
+                        if($('#sdek').hasClass('hide')) {
+                            $('#sdek').removeClass('hide')
+                            $('.check-2').removeClass('show')
+                        }
+                    })
+
+                    $('#sdek').click(function () {
+                        $('.check-2').addClass('show')
+                        $('#sdek').addClass('hide')
+
+                        if($('.check-1').hasClass('show')) {
+                            $('.check-1').removeClass('show')
+                            $('#door').removeClass('hide')
+                        }
+                    })
+                }
+
+                function openHeader() {
+                    var headerMenu = document.getElementById('header-for-footer');
+                    var footBtnMenu = document.getElementById('foot-btn-menu');
+                    var phone = document.querySelector('.footer__phones');
+
+                    headerMenu.classList.toggle('_active');
+                    headerMenu.classList.toggle('d-none');
+                    footBtnMenu.classList.toggle('_active');
+                    phone.classList.toggle('d-none')
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('.close-popup').addEventListener("click", function() {
+                        document.getElementById('popup').classList.remove('active');
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+</footer>
 @endsection
